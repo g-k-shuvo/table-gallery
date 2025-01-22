@@ -1,0 +1,191 @@
+/*
+________________________________________________________________________
+Responsive CSS3 Flexbox Tables v2.0 (06.2019)
+Copyright © QuanticaLabs
+www.quanticalabs.com
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*/
+
+/* Table Header */
+[role="table"] div.table-desc+[role="row-group"]
+	{
+	background: #1D5FD1;
+	}
+	
+[role="table"] [role="row"] [role="column-header"]
+	{
+	color: #FFF;
+	}
+	
+/* Table Subeader */
+[role="table"] [role="subheader"]
+	{	
+	background: #DDE5F0;
+	}
+	
+[role="table"] [role="subheader"] [role="cell"]
+	{
+	color: #1D5FD1;
+	}
+	
+/* Button */
+[role="table"] label,
+[role="table"] [role="cell"] a.button
+	{
+	background: #DDE5F0;
+	color: #1D5FD1;
+	}
+	
+/* Button Hover / Pressed */
+[role="table"] label:hover,
+[role="table"] [role="cell"] a.button:hover,
+[role="table"] [role="row"] input[type="checkbox"]:checked~span>label,
+[role="table"] [role="row"] input[type="checkbox"]:checked~span>.button,
+[role="table"] [role="row"] input[type="radio"]:checked~span>label,
+[role="table"] [role="row"] input[type="radio"]:checked~span>.button,
+[role="table"] input#wrap-text[type="checkbox"]:checked~div.table-desc div.filter-panel label[for="wrap-text"]
+	{
+	background: #1D5FD1;
+	color: #FFF;
+	}
+	
+[role="table"] input#wrap-text[type="checkbox"]:checked~div.table-desc div.filter-panel label[for="wrap-text"]::after,
+[role="table"] [role="row"] input[type="checkbox"]:checked~span>label::before,
+[role="table"] [role="row"] input[type="radio"]:checked~span>label::before
+	{
+	color: #FFF;
+	}
+
+/* Filter Button */
+[role="table"] div.filter-panel label[for="filter-column"]
+	{
+	background: #1D5FD1;
+	color: #FFF;
+	}
+	
+/* Filter Button Hover / Pressed */
+[role="table"] div.filter-panel label[for="filter-column"]:hover,
+[role="table"] input#filter-column[type="checkbox"]:checked~div.table-desc>div.filter-panel label[for="filter-column"]
+	{
+	background: #3D4451;
+	color: #FFF;
+	}
+	
+/* Filter Checkbox */
+[role="table"] div.filter-panel ul li label::before
+	{
+	background: #1D5FD1;
+	border-color: #1D5FD1;
+	}
+		
+/* Table Borders */
+[role="table"] [role="row-group"]+[role="row-group"]>[role="row"],
+[role="table"]>[role="row-group"]:last-child,
+[role="table"] [role="row"] [role="cell"],
+[role="table"] [role="row-group"]:last-child [role="row"] div.expandable:not([role="cell"]) [role="row"]:last-child,
+[role="table"] [role="row-group"]:last-child [role="row"] [role="cell"].expandable,
+[role="table"] div.filter-panel ul,
+[role="table"] input#col-1[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(1) label::before,
+[role="table"] input#col-2[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(2) label::before,
+[role="table"] input#col-3[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(3) label::before,
+[role="table"] input#col-4[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(4) label::before,
+[role="table"] input#col-5[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(5) label::before,
+[role="table"] input#col-6[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(6) label::before,
+[role="table"] input#col-7[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(7) label::before,
+[role="table"] input#col-8[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(8) label::before,
+[role="table"] input#col-9[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(9) label::before,
+[role="table"] input#col-10[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(10) label::before,
+[role="table"] input#col-11[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(11) label::before,
+[role="table"] input#col-12[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(12) label::before,
+[role="table"] input#col-13[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(13) label::before,
+[role="table"] input#col-14[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(14) label::before,
+[role="table"] input#col-15[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(15) label::before,
+[role="table"] input#col-16[type="checkbox"]:checked~div.table-desc>div.filter-panel ul li:nth-of-type(16) label::before,
+[role="table"] [role="cell"],
+[role="table"] [role="row-group"]:last-child [role="row"]:last-child [role="cell"].expandable,
+[role="table"] div.table-desc~[role="row-group"],
+[role="table"] [role="row-group"]+[role="row-group"]:not(.accordion)>[role="row"],
+[role="table"] [role="row-group"]+[role="row-group"].accordion [role="row"],
+[role="table"] div.expandable [role="row"]
+	{
+	border-color: #DDE5F0;
+	}
+	
+/* Table Odd Row Background */
+[role="table"] [role="row-group"]:last-child [role="row"]:nth-child(even) [role="cell"]
+	{
+	background: #F5F7F9;
+	}
+	
+/* Expandable/ collapsible section heading */
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="checkbox"]:checked~span,
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="radio"]:checked~span
+	{
+	background: #E9EEF4;
+	border-color: #E9EEF4;
+	color: #333;
+	}
+	
+/* Expanded (Active) Row Content Elements */		
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="checkbox"]:checked~span [status-label],
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="checkbox"]:checked~span span.check::before,
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="checkbox"]:checked~span span.cross::before,
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="radio"]:checked~span [status-label],
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="radio"]:checked~span span.check::before,
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="radio"]:checked~span span.cross::before
+	{
+	background: #B2C1D5;
+	color: #FFF;
+	}
+	
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="checkbox"]:checked~span [status-bar]::before,
+[role="table"] [role="row-group"]:last-child [role="row"] input[type="radio"]:checked~span [status-bar]::before
+	{
+	background: #B2C1D5;
+	}
+
+/* Table body/ filter body text */
+[role="table"] [role="cell"],
+[role="table"] div.table-desc,
+[role="table"] [role="cell"] [status-label="id-1"],
+[role="table"] [role="cell"] [status-bar="id-1"]::before,
+[role="table"] div.filter-panel ul li label
+	{
+	color: #333;
+	}
+	
+/* Link */
+[role="table"] [role="column-header"] a,
+[role="table"] [role="cell"] a
+	{
+	color: #1D5FD1;
+	}
+	
+/* Check, Cross Icons */
+[role="table"] [role="cell"] .check::before,
+[role="table"] [role="cell"] .cross::before
+	{
+	background: #DDE5F0;
+	color: #1D5FD1;
+	}
+
+/* Tooltips Underlines */
+[role="table"] [tooltip]
+	{
+	text-decoration-color: #AAA;
+	-moz-text-decoration-color: #AAA;
+	}
+	
+[role="table"] [role="column-header"] [tooltip]
+	{
+	text-decoration-color: #FFF;
+	-moz-text-decoration-color: #FFF;
+	}
+	
+/* 'NEW' or 'PENDING' status label */
+[role="table"] [role="cell"] [status-label="id-1"],
+[role="table"] [role="cell"] [status-bar="id-1"]::before
+	{
+	background: #DDE5F0;
+	color: #333;
+	}

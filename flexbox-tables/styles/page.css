@@ -1,0 +1,165 @@
+/*
+________________________________________________________________________
+Responsive CSS3 Flexbox Tables v2.0 (06.2019)
+Copyright © QuanticaLabs
+www.quanticalabs.com
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*/
+
+body
+	{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', arial, sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	background: #FFF;
+	}
+	
+div.header-container
+	{
+	width: 100%;
+	display: block;
+	background: #F5F7F9;
+	}
+	
+div.header-container .title
+	{
+	width: 1230px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px 0 5px 0;
+	font-size: 36px;
+	font-weight: 700;
+	color: #000;
+	line-height: 1.4;
+	}
+	
+div.header-container .demos
+	{
+	width: 1230px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 0 45px 0;
+	}
+	
+div.header-container .demos a
+	{
+	display: inline-block;
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	border: 1px solid #DDE5F0;
+	padding: 10px 8px 12px 8px;
+	border-radius: 4px;
+	margin-right: 10px;
+	margin-top: 10px;
+	
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	}
+	
+div.header-container .demos a:last-of-type
+	{
+	margin-right: 0;
+	}
+	
+div.header-container .demos a:hover,
+div.header-container .demos a.active
+	{
+	background: #3D4451;
+	border-color: #3D4451;
+	color: #FFF;
+	}
+
+div.page-container
+	{
+	width: 1230px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
+	}
+	
+div.page-container h1
+	{
+	margin: 50px 0 25px 0;
+	font-size: 28px;
+	font-weight: 400;
+	color: #000;
+	line-height: 42px;
+	}
+	
+/*
+________________________________________________________________________
+RESPONSIVE
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*/
+
+@media only screen and (max-width: 1249px)
+	{
+	div.header-container .title,
+	div.header-container .demos,
+	div.page-container
+		{
+		width: 990px;
+		}
+	}
+	
+@media only screen and (max-width: 1009px)
+	{
+	div.header-container .title,
+	div.header-container .demos,	
+	div.page-container
+		{
+		width: 750px;
+		}
+	}
+	
+@media only screen and (max-width: 769px)
+	{
+	div.header-container .title,
+	div.header-container .demos,
+	div.page-container
+		{
+		width: 460px;
+		}
+		
+	div.header-container .title
+		{
+		font-size: 28px;
+		}
+		
+	div.page-container h1
+		{
+		font-size: 20px;
+		line-height: 1.4;
+		}
+		
+	div.header-container .demos a
+		{
+		font-size: 11px;
+		letter-spacing: 0.5px;
+		padding: 7px 5px 8px 5px;
+		margin-right: 5px;
+		margin-top: 5px;
+		}
+	}
+	
+@media only screen and (max-width: 479px)
+	{
+	div.header-container .title,	
+	div.header-container .demos,
+	div.page-container
+		{
+		width: 300px;
+		}
+	}
