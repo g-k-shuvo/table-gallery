@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Responsive CSS3 Flexbox Tables</title>
+		<!--
+		________________________________________________________________________
+		Responsive CSS3 Flexbox Tables v2.0 (06.2019)
+		Copyright © QuanticaLabs
+		www.quanticalabs.com
+		¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+		-->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="styles/page.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+		
+		<!--
+		________________________________________________________________________
+		CSS Stylesheets
+		¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+		-->
+		<link rel="stylesheet" type="text/css" href="styles/flexbox-tables.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/color-scheme-1.css"/>	<!-- Table color scheme -->
+	</head>
+	
+	<body>
+		<div class="header-container">
+			<div class="title">Responsive CSS3 Flexbox Tables</div>
+			<div class="demos">
+				<a href="01-car-booking.html" class="active">Car Booking Style 1</a><a href="02-car-booking.html">Car Booking Style 2</a><a href="03-top-grossing-movies.html">Top Grossing Movies</a><a href="04-football-league-table.html">Football League Table</a><a href="05-employees-of-branches.html">Employees of Branches</a><a href="06-faq.html">FAQ</a>
+			</div>
+		</div>
+		
+		<div class="page-container">
+			<h1>Car Booking Style 1</h1>
+			
+			<!-- TABLE START -->
+			<!--
+			________________________________________________________________________
+			Responsive CSS3 Flexbox Tables
+			Copyright © QuanticaLabs
+			www.quanticalabs.com
+			¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+			-->
+			<div role="table" aria-label="Responsive CSS3 Flexbox Tables" aria-describedby="QuanticaLabs">
+				
+				<!--
+				________________________________________________________________________
+				DESCRIPTION/ COLUMN FILTERING 
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<input id="col-1" class="column" name="#" type="checkbox" />
+				<input id="col-2" class="column" name="#" type="checkbox" />
+				<input id="col-3" class="column" name="#" type="checkbox" />
+				<input id="col-4" class="column" name="#" type="checkbox" />
+				<input id="col-5" class="column" name="#" type="checkbox" />
+				<input id="col-6" class="column" name="#" type="checkbox" />
+				<input id="col-7" class="column" name="#" type="checkbox" />
+				<input id="col-8" class="column" name="#" type="checkbox" />
+				<input id="col-9" class="column" name="#" type="checkbox" />
+				<input id="col-10" class="column" name="#" type="checkbox" />
+				<input id="col-11" class="column" name="#" type="checkbox" />
+				<input id="col-12" class="column" name="#" type="checkbox" />
+				<input id="col-13" class="column" name="#" type="checkbox" />
+				<input id="col-14" class="column" name="#" type="checkbox" />
+				<input id="col-15" class="column" name="#" type="checkbox" />
+				<input id="col-16" class="column" name="#" type="checkbox" />
+				
+				<input id="filter-column" name="#" type="checkbox" />
+				<input id="wrap-text" name="#" type="checkbox" />
+				<div class="table-desc">
+					<span>Example 1. A data table with the ability to expand / collapse table rows. The content of the hidden row is one column based. Status bars are shown.</span>
+					<div class="filter-panel">
+						<label for="filter-column">Filter</label>
+						<label for="wrap-text">View</label>
+						<ul>
+							<li><label for="col-1">ID</label></li>
+							<li><label for="col-2">Client</label></li>
+							<li><label for="col-3">Pickup Address</label></li>
+							<li><label for="col-4">Dropoff Address</label></li>
+							<li><label for="col-5">Status</label></li>
+							<li><label for="col-6">Icons</label></li>
+							<li><label for="col-7">Date</label></li>
+							<li><label for="col-8">Action</label></li>
+						</ul>			
+					</div>
+				</div>
+			  
+				<!--
+				________________________________________________________________________
+				TABLE HEADER
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<div role="row-group">
+					<div role="row">
+						<span role="column-header">ID</span>
+						<span role="column-header">Client</span>
+						<span role="column-header">Pickup Address</span>
+						<span role="column-header">Dropoff Address</span>
+						<span role="column-header">Status</span>
+						<span role="column-header">Icons</span>
+						<span role="column-header">Date</span>
+						<span role="column-header">Action</span>
+					</div>
+				</div>
+			  
+				<!--
+				________________________________________________________________________
+				TABLE BODY
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<div role="row-group">
+				
+					<!--
+					________________________________________________________________________
+					ROW 1
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-1" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+						
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17265</a></span>
+						<span role="cell" data-header="Client">Jessie Moody</span>
+						<span role="cell" data-header="Pickup Address"><span tooltip="Put here your tooltip text">3792 Worley Avenue, Lynchburg</span></span>
+						<span role="cell" data-header="Dropoff Address">1005 Clearview Drive, Denver</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-1">Pending</span></span>
+						<span role="cell" data-header="Icons"><span class="check">Yes</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/06/20</span></span>
+						<span role="cell" data-header="Action"><label for="row-1"></label></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 2
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-2" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17264</a></span>
+						<span role="cell" data-header="Client">Robert Kissel</span>
+						<span role="cell" data-header="Pickup Address">166 Morningview Lane, Dougherty</span>
+						<span role="cell" data-header="Dropoff Address">1508 Quincy Street, Philadelphia</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-2">Confirmed</span></span>
+						<span role="cell" data-header="Icons"><span class="check">Yes</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/06/17</span></span>
+						<span role="cell" data-header="Action"><label for="row-2"></label></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 3
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-3" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17263</a></span>
+						<span role="cell" data-header="Client">Jason Smith</span>
+						<span role="cell" data-header="Pickup Address">4161 Duncan Avenue, Elmsford</span>
+						<span role="cell" data-header="Dropoff Address">3115 Wilmar Farm Road, Lanham</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-2">Confirmed</span></span>
+						<span role="cell" data-header="Icons"><span class="check">Yes</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/06/15</span></span>
+						<span role="cell" data-header="Action"><label for="row-3"></label></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 4
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-4" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17262</a></span>
+						<span role="cell" data-header="Client">Matthew Adams</span>
+						<span role="cell" data-header="Pickup Address">3194 Anthony Avenue, Roscoe</span>
+						<span role="cell" data-header="Dropoff Address">3179 James Street, Fairport</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-3">In Progress</span></span>
+						<span role="cell" data-header="Icons"><span class="check">Yes</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/06/12</span></span>
+						<span role="cell" data-header="Action"><label for="row-4"></label></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					SUBHEADER
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="subheader">
+						<span role="cell">2019, May</span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 5
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-5" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17261</a></span>
+						<span role="cell" data-header="Client">James Johnson</span>
+						<span role="cell" data-header="Pickup Address">1354 Dye Street, Chandler</span>
+						<span role="cell" data-header="Dropoff Address">1768 Carolina Avenue, Brownsville</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-4">Completed</span></span>
+						<span role="cell" data-header="Icons"><span class="check">Yes</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/05/25</span></span>
+						<span role="cell" data-header="Action"><label for="row-5"></label></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 6
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-6" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17260</a></span>
+						<span role="cell" data-header="Client">Anna Garcia</span>
+						<span role="cell" data-header="Pickup Address">3817 Melm Street, Providence</span>
+						<span role="cell" data-header="Dropoff Address">1030 Marcus Street, Chattanooga</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-4">Completed</span></span>
+						<span role="cell" data-header="Icons"><span class="check">Yes</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/05/14</span></span>
+						<span role="cell" data-header="Action"><label for="row-6"></label></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 7
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-7" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17259</a></span>
+						<span role="cell" data-header="Client">Lisa Stevenson</span>
+						<span role="cell" data-header="Pickup Address">1530 Shady Pines Drive, Norton</span>
+						<span role="cell" data-header="Dropoff Address">176 Myra Street, Providence</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-5">Cancelled</span></span>
+						<span role="cell" data-header="Icons"><span class="cross">No</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/05/09</span></span>
+						<span role="cell" data-header="Action"><label for="row-7"></label></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 8
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-8" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+								<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								<a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Contact us</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="ID"><a href="#">17258</a></span>
+						<span role="cell" data-header="Client">Donald Murray</span>
+						<span role="cell" data-header="Pickup Address">4469 Steele Street, Lombard</span>
+						<span role="cell" data-header="Dropoff Address">2316 Concord Street, Charlotte</span>
+						<span role="cell" data-header="Status" class="status"><span status-bar="id-4">Completed</span></span>
+						<span role="cell" data-header="Icons"><span class="cross">No</span></span>
+						<span role="cell" data-header="Date"><span tooltip="Pickup Date">2019/05/03</span></span>
+						<span role="cell" data-header="Action"><label for="row-8"></label></span>
+					</div>
+				
+				</div>
+			</div>
+			<!-- TABLE END -->
+			
+		</div>
+	</body>
+</html>
