@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Responsive CSS3 Flexbox Tables</title>
+		<!--
+		________________________________________________________________________
+		Responsive CSS3 Flexbox Tables v2.0 (06.2019)
+		Copyright © QuanticaLabs
+		www.quanticalabs.com
+		¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+		-->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="styles/page.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+		
+		<!--
+		________________________________________________________________________
+		CSS Stylesheets
+		¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+		-->
+		<link rel="stylesheet" type="text/css" href="styles/flexbox-tables.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/color-scheme-1.css"/>	<!-- Table color scheme -->
+	</head>
+	
+	<body>
+		<div class="header-container">
+			<div class="title">Responsive CSS3 Flexbox Tables</div>
+			<div class="demos">
+				<a href="01-car-booking.html">Car Booking Style 1</a><a href="02-car-booking.html">Car Booking Style 2</a><a href="03-top-grossing-movies.html">Top Grossing Movies</a><a href="04-football-league-table.html" class="active">Football League Table</a><a href="05-employees-of-branches.html">Employees of Branches</a><a href="06-faq.html">FAQ</a>
+			</div>
+		</div>
+		
+		<div class="page-container">
+			<h1>Football League Table</h1>
+			
+			<!-- TABLE START -->
+			<!--
+			________________________________________________________________________
+			Responsive CSS3 Flexbox Tables
+			Copyright © QuanticaLabs
+			www.quanticalabs.com
+			¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+			-->
+			<div role="table" aria-label="Responsive CSS3 Flexbox Tables" aria-describedby="QuanticaLabs">
+				
+				<!--
+				________________________________________________________________________
+				DESCRIPTION/ COLUMN FILTERING 
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<input id="col-1" class="column" name="#" type="checkbox" />
+				<input id="col-2" class="column" name="#" type="checkbox" />
+				<input id="col-3" class="column" name="#" type="checkbox" />
+				<input id="col-4" class="column" name="#" type="checkbox" />
+				<input id="col-5" class="column" name="#" type="checkbox" />
+				<input id="col-6" class="column" name="#" type="checkbox" />
+				<input id="col-7" class="column" name="#" type="checkbox" />
+				<input id="col-8" class="column" name="#" type="checkbox" />
+				<input id="col-9" class="column" name="#" type="checkbox" />
+				<input id="col-10" class="column" name="#" type="checkbox" />
+				<input id="col-11" class="column" name="#" type="checkbox" />
+				<input id="col-12" class="column" name="#" type="checkbox" />
+				<input id="col-13" class="column" name="#" type="checkbox" />
+				<input id="col-14" class="column" name="#" type="checkbox" />
+				<input id="col-15" class="column" name="#" type="checkbox" />
+				<input id="col-16" class="column" name="#" type="checkbox" />
+				
+				<input id="filter-column" name="#" type="checkbox" />
+				<input id="wrap-text" name="#" type="checkbox" checked="checked" /> <!-- Text wrapping is enabled -->
+				<div class="table-desc">
+					<span>Example 4. A football league table with text wrapping enabled by default and wrap text button hidden. The team form component is shown and no visible subheaders.</span>
+					<div class="filter-panel">
+						<label for="filter-column">Filter</label>
+						<!--<label for="wrap-text">View</label>-->
+						<ul>
+							<li><label for="col-1">Position</label></li>
+							<li><label for="col-2">Club</label></li>
+							<li><label for="col-3">Played</label></li>
+							<li><label for="col-4">Won</label></li>
+							<li><label for="col-5">Drawn</label></li>
+							<li><label for="col-6">Lost</label></li>
+							<li><label for="col-7">Goals For</label></li>
+							<li><label for="col-8">Goals Against</label></li>
+							<li><label for="col-9">Goal Difference</label></li>
+							<li><label for="col-10">Points</label></li>
+							<li><label for="col-11">Form</label></li>
+						</ul>			
+					</div>
+				</div>
+			  
+				<!--
+				________________________________________________________________________
+				TABLE HEADER
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<div role="row-group">
+					<div role="row">
+						<span role="column-header" class="narrower"><span tooltip="Position">Pos</span></span>
+						<span role="column-header" class="wider">Club</span>
+						<span role="column-header">Played</span>
+						<span role="column-header">Won</span>
+						<span role="column-header">Drawn</span>
+						<span role="column-header">Lost</span>
+						<span role="column-header"><span tooltip="Goals For">GF</span></span>
+						<span role="column-header"><span tooltip="Goals Against">GA</span></span>
+						<span role="column-header"><span tooltip="Goal Difference">GD</span></span>
+						<span role="column-header">Points</span>
+						<span role="column-header" class="wide">Form</span>
+					</div>
+				</div>
+			  
+				<!--
+				________________________________________________________________________
+				TABLE BODY
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<div role="row-group">
+				
+					<!--
+					________________________________________________________________________
+					ROW 1
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-1" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+						
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">1</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/man-city.png">Man. City</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">32</span>
+						<span role="cell" data-header="Drawn">2</span>
+						<span role="cell" data-header="Lost">4</span>
+						<span role="cell" data-header="GF">95</span>
+						<span role="cell" data-header="GA">23</span>
+						<span role="cell" data-header="GD">72</span>
+						<span role="cell" data-header="Points">98</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 2
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-2" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">2</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/liverpool.png">Liverpool</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">30</span>
+						<span role="cell" data-header="Drawn">7</span>
+						<span role="cell" data-header="Lost">1</span>
+						<span role="cell" data-header="GF">89</span>
+						<span role="cell" data-header="GA">22</span>
+						<span role="cell" data-header="GD">67</span>
+						<span role="cell" data-header="Points">97</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span><span title="Draw" status-form="id-2"></span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 3
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-3" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">3</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/chelsea.png">Chelsea</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">21</span>
+						<span role="cell" data-header="Drawn">9</span>
+						<span role="cell" data-header="Lost">8</span>
+						<span role="cell" data-header="GF">63</span>
+						<span role="cell" data-header="GA">39</span>
+						<span role="cell" data-header="GD">24</span>
+						<span role="cell" data-header="Points">72</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Win" status-form="id-1"></span><span title="Draw" status-form="id-2"></span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span><span title="Draw" status-form="id-2"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 4
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-4" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+								<p>Okręgowa Izba Pielęgniarek i Położnych w Opolu informuje, że nowe wnioski o wydanie opinii w sprawie podwyżek wydawane są wyłącznie w przypadku zmian, które mogłyby spowodować objęcie podwyżkami innych osób lub przyznanie podwyżek.</p>
+								<a class="button" href="#">Get started</a><a class="button" href="#">Another button</a>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">4</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/tottenham.png">Tottenham</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">23</span>
+						<span role="cell" data-header="Drawn">2</span>
+						<span role="cell" data-header="Lost">13</span>
+						<span role="cell" data-header="GF">67</span>
+						<span role="cell" data-header="GA">39</span>
+						<span role="cell" data-header="GD">28</span>
+						<span role="cell" data-header="Points">71</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Win" status-form="id-1"></span><span title="Draw" status-form="id-2"></span><span title="Loss" status-form="id-3"></span><span title="Win" status-form="id-1"></span><span title="Win" status-form="id-1"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 5
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-5" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">5</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/arsenal.png">Arsenal</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">21</span>
+						<span role="cell" data-header="Drawn">7</span>
+						<span role="cell" data-header="Lost">10</span>
+						<span role="cell" data-header="GF">73</span>
+						<span role="cell" data-header="GA">51</span>
+						<span role="cell" data-header="GD">22</span>
+						<span role="cell" data-header="Points">70</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Win" status-form="id-1"></span><span title="Draw" status-form="id-2"></span><span title="Loss" status-form="id-3"></span><span title="Win" status-form="id-1"></span><span title="Draw" status-form="id-2"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 6
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-6" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">6</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/man-united.png">Man United</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">19</span>
+						<span role="cell" data-header="Drawn">9</span>
+						<span role="cell" data-header="Lost">10</span>
+						<span role="cell" data-header="GF">65</span>
+						<span role="cell" data-header="GA">54</span>
+						<span role="cell" data-header="GD">11</span>
+						<span role="cell" data-header="Points">66</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Draw" status-form="id-2"></span><span title="Draw" status-form="id-2"></span><span title="Draw" status-form="id-2"></span><span title="Win" status-form="id-1"></span><span title="Loss" status-form="id-3"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 7
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-7" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">7</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/wolverhampton.png">Wolverhampton</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">16</span>
+						<span role="cell" data-header="Drawn">9</span>
+						<span role="cell" data-header="Lost">13</span>
+						<span role="cell" data-header="GF">47</span>
+						<span role="cell" data-header="GA">46</span>
+						<span role="cell" data-header="GD">1</span>
+						<span role="cell" data-header="Points">57</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Loss" status-form="id-3"></span><span title="Draw" status-form="id-2"></span><span title="Draw" status-form="id-2"></span><span title="Loss" status-form="id-3"></span><span title="Draw" status-form="id-2"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 8
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-8" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">8</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/everton.png">Everton</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">15</span>
+						<span role="cell" data-header="Drawn">9</span>
+						<span role="cell" data-header="Lost">14</span>
+						<span role="cell" data-header="GF">54</span>
+						<span role="cell" data-header="GA">46</span>
+						<span role="cell" data-header="GD">8</span>
+						<span role="cell" data-header="Points">54</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Loss" status-form="id-3"></span><span title="Draw" status-form="id-2"></span><span title="Loss" status-form="id-3"></span><span title="Win" status-form="id-1"></span><span title="Loss" status-form="id-3"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 9
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-9" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">9</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/leicester-city.png">Leicester City</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">15</span>
+						<span role="cell" data-header="Drawn">7</span>
+						<span role="cell" data-header="Lost">16</span>
+						<span role="cell" data-header="GF">51</span>
+						<span role="cell" data-header="GA">48</span>
+						<span role="cell" data-header="GD">3</span>
+						<span role="cell" data-header="Points">52</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Draw" status-form="id-2"></span><span title="Win" status-form="id-1"></span><span title="Draw" status-form="id-2"></span><span title="Loss" status-form="id-3"></span><span title="Loss" status-form="id-3"></span></span></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 10
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-10" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<p>Responsive CSS3 Flexbox Tables are truly responsive CSS3 tables based on flexbox model with expandable/ collapsible rows, column filtering, tooltips, and text wrapping control. Lightweight (no javascript, no icons or graphics), easy to configure and manage, contain many well-styled table cell components for various applications including buttons, status bars and check/ cross icons.</p>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Pos" class="narrower">10</span>
+						<span role="cell" data-header="Club" class="wider"><span><img src="images/league/west-ham.png">West Ham</span></span>
+						<span role="cell" data-header="Played">38</span>
+						<span role="cell" data-header="Won">15</span>
+						<span role="cell" data-header="Drawn">7</span>
+						<span role="cell" data-header="Lost">16</span>
+						<span role="cell" data-header="GF">52</span>
+						<span role="cell" data-header="GA">55</span>
+						<span role="cell" data-header="GD">-3</span>
+						<span role="cell" data-header="Points">52</span>
+						<span role="cell" data-header="Form" class="wide"><span><span title="Loss" status-form="id-3"></span><span title="Loss" status-form="id-3"></span><span title="Loss" status-form="id-3"></span><span title="Draw" status-form="id-2"></span><span title="Draw" status-form="id-2"></span></span></span>
+					</div>
+				
+				</div>
+			</div>
+			<!-- TABLE END -->
+			
+		</div>
+	</body>
+</html>

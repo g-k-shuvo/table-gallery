@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Responsive CSS3 Flexbox Tables</title>
+		<!--
+		________________________________________________________________________
+		Responsive CSS3 Flexbox Tables v2.0 (06.2019)
+		Copyright © QuanticaLabs
+		www.quanticalabs.com
+		¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+		-->
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" href="styles/page.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+		
+		<!--
+		________________________________________________________________________
+		CSS Stylesheets
+		¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+		-->
+		<link rel="stylesheet" type="text/css" href="styles/flexbox-tables.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/color-scheme-1.css"/>	<!-- Table color scheme -->
+	</head>
+	
+	<body>
+		<div class="header-container">
+			<div class="title">Responsive CSS3 Flexbox Tables</div>
+			<div class="demos">
+				<a href="01-car-booking.html">Car Booking Style 1</a><a href="02-car-booking.html">Car Booking Style 2</a><a href="03-top-grossing-movies.html" class="active">Top Grossing Movies</a><a href="04-football-league-table.html">Football League Table</a><a href="05-employees-of-branches.html">Employees of Branches</a><a href="06-faq.html">FAQ</a>
+			</div>
+		</div>
+		
+		<div class="page-container">
+			<h1>Top Grossing Movies</h1>
+			
+			<!-- TABLE START -->
+			<!--
+			________________________________________________________________________
+			Responsive CSS3 Flexbox Tables
+			Copyright © QuanticaLabs
+			www.quanticalabs.com
+			¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+			-->
+			<div role="table" aria-label="Responsive CSS3 Flexbox Tables" aria-describedby="QuanticaLabs">
+				
+				<!--
+				________________________________________________________________________
+				DESCRIPTION/ COLUMN FILTERING 
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<input id="col-1" class="column" name="#" type="checkbox" />
+				<input id="col-2" class="column" name="#" type="checkbox" />
+				<input id="col-3" class="column" name="#" type="checkbox" />
+				<input id="col-4" class="column" name="#" type="checkbox" />
+				<input id="col-5" class="column" name="#" type="checkbox" />
+				<input id="col-6" class="column" name="#" type="checkbox" />
+				<input id="col-7" class="column" name="#" type="checkbox" />
+				<input id="col-8" class="column" name="#" type="checkbox" />
+				<input id="col-9" class="column" name="#" type="checkbox" />
+				<input id="col-10" class="column" name="#" type="checkbox" />
+				<input id="col-11" class="column" name="#" type="checkbox" />
+				<input id="col-12" class="column" name="#" type="checkbox" />
+				<input id="col-13" class="column" name="#" type="checkbox" />
+				<input id="col-14" class="column" name="#" type="checkbox" />
+				<input id="col-15" class="column" name="#" type="checkbox" />
+				<input id="col-16" class="column" name="#" type="checkbox" />
+				
+				<input id="filter-column" name="#" type="checkbox" />
+				<input id="wrap-text" name="#" type="checkbox" />
+				<div class="table-desc">
+					<span>Example 3. A data table with call to action buttons exposed. Expand / collapse buttons moved to the first column. The content of the hidden row is two column based.</span>
+					<div class="filter-panel">
+						<label for="filter-column">Filter</label>
+						<label for="wrap-text">View</label>
+						<ul>
+							<li><label for="col-1">Film Title</label></li>
+							<li><label for="col-2">Released</label></li>
+							<li><label for="col-3">Studio</label></li>
+							<li><label for="col-4">Domestic Gross</label></li>
+							<li><label for="col-5">Foreign Gross</label></li>
+							<li><label for="col-6">Worldwide Gross</label></li>
+							<li><label for="col-7">Budget</label></li>
+							<li><label for="col-8">Action</label></li>
+						</ul>		
+							
+					</div>
+				</div>
+			  
+				<!--
+				________________________________________________________________________
+				TABLE HEADER
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<div role="row-group">
+					<div role="row">
+						<span role="column-header" class="wide">Film Title</span>
+						<span role="column-header">Released</span>
+						<span role="column-header">Studio</span>
+						<span role="column-header">Domestic Gross</span>
+						<span role="column-header">Foreign Gross</span>
+						<span role="column-header">Worldwide Gross</span>
+						<span role="column-header">Budget</span>
+						<span role="column-header">Action</span>
+					</div>
+				</div>
+			  
+				<!--
+				________________________________________________________________________
+				TABLE BODY
+				¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+				-->
+				<div role="row-group">
+				
+					<!--
+					________________________________________________________________________
+					ROW 1
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-1" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/frozen.jpg">
+								</div>
+								<div class="column-80">
+									<h2>Frozen (2013)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-1"></label>Frozen</span>
+						<span role="cell" data-header="Released">2013</span>
+						<span role="cell" data-header="Studio">Disney</span>
+						<span role="cell" data-header="Domestic Gross">$400,738,000</span>
+						<span role="cell" data-header="Foreign Gross">$875,742,000</span>
+						<span role="cell" data-header="Worldwide Gross">$1,276,480,000</span>
+						<span role="cell" data-header="Budget">$150,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 2
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-2" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/minions.jpg">
+								</div>
+								<div class="column-80">
+									<h2>Minions (2015)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-2"></label>Minions</span>
+						<span role="cell" data-header="Released">2015</span>
+						<span role="cell" data-header="Studio">Universal</span>
+						<span role="cell" data-header="Domestic Gross">$336,500,000</span>
+						<span role="cell" data-header="Foreign Gross">$820,115,000</span>
+						<span role="cell" data-header="Worldwide Gross">$1,156,615,000</span>
+						<span role="cell" data-header="Budget">$74,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 3
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-3" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/toystory.jpg">
+								</div>
+								<div class="column-80">
+									<h2>Toy Story 3 (2010)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-3"></label>Toy Story 3</span>
+						<span role="cell" data-header="Released">2010</span>
+						<span role="cell" data-header="Studio">Disney Pixar</span>
+						<span role="cell" data-header="Domestic Gross">$415,162,000</span>
+						<span role="cell" data-header="Foreign Gross">$652,105,000</span>
+						<span role="cell" data-header="Worldwide Gross">$1,067,267,000</span>
+						<span role="cell" data-header="Budget">$200,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 4
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-4" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/zootopia.jpg">
+								</div>
+								<div class="column-80">
+									<h2>Zootopia (2016)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-4"></label>Zootopia</span>
+						<span role="cell" data-header="Released">2016</span>
+						<span role="cell" data-header="Studio">Disney</span>
+						<span role="cell" data-header="Domestic Gross">$341,260,000</span>
+						<span role="cell" data-header="Foreign Gross">$682,100,000</span>
+						<span role="cell" data-header="Worldwide Gross">$1,023,360,000</span>
+						<span role="cell" data-header="Budget">$150,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 5
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-5" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/minions.jpg">
+								</div>
+								<div class="column-80">
+									<h2>Despicable Me 2 (2013)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-5"></label>Despicable Me 2</span>
+						<span role="cell" data-header="Released">2013</span>
+						<span role="cell" data-header="Studio">Universal</span>
+						<span role="cell" data-header="Domestic Gross">$367,000,000</span>
+						<span role="cell" data-header="Foreign Gross">$602,500,000</span>
+						<span role="cell" data-header="Worldwide Gross">$969,500,000</span>
+						<span role="cell" data-header="Budget">$76,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 6
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-6" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/lionking.jpg">
+								</div>
+								<div class="column-80">
+									<h2>The Lion King (1994)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-6"></label>The Lion King</span>
+						<span role="cell" data-header="Released">1994</span>
+						<span role="cell" data-header="Studio">Disney</span>
+						<span role="cell" data-header="Domestic Gross">$422,700,000</span>
+						<span role="cell" data-header="Foreign Gross">$464,320,000</span>
+						<span role="cell" data-header="Worldwide Gross">$887,020,000</span>
+						<span role="cell" data-header="Budget">$45,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 7
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-7" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/findingnemo.jpg">
+								</div>
+								<div class="column-80">
+									<h2>Finding Nemo (2003)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-7"></label>Finding Nemo</span>
+						<span role="cell" data-header="Released">2003</span>
+						<span role="cell" data-header="Studio">Disney Pixar</span>
+						<span role="cell" data-header="Domestic Gross">$412,185,000</span>
+						<span role="cell" data-header="Foreign Gross">$425,237,000</span>
+						<span role="cell" data-header="Worldwide Gross">$837,422,000</span>
+						<span role="cell" data-header="Budget">$94,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+					
+					<!--
+					________________________________________________________________________
+					ROW 8
+					¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+					-->
+					<div role="row">
+					
+						<!-- EXPANDABLE/ COLLAPSIBLE SECTION -->
+						<input id="row-8" name="#" type="checkbox" />
+						<div class="expandable" role="cell">
+							<div role="row">
+								<div class="column-20">
+									<img src="images/movies/shrek.jpg">
+								</div>
+								<div class="column-80">
+									<h2>Shrek 2 (2004)</h2>
+									<p>Here you can insert any block of text. Any number and length of paragraphs is supported. You can also add optional buttons.</p>
+									<p>If you are interested in an individual layout of this section, including the division into columns, including graphics or photos - in short, fully adapted to your needs, please feel free to contact us. We can do it for you as part of our paid service. Thank you.</p>
+								</div>
+							</div>
+						</div>
+					
+						<!-- ROW CELLS -->
+						<span role="cell" data-header="Film Title" class="wide"><label for="row-8"></label>Shrek 2</span>
+						<span role="cell" data-header="Released">2004</span>
+						<span role="cell" data-header="Studio">Dreamworks</span>
+						<span role="cell" data-header="Domestic Gross">$327,555,000</span>
+						<span role="cell" data-header="Foreign Gross">$439,105,000</span>
+						<span role="cell" data-header="Worldwide Gross">$766,660,000</span>
+						<span role="cell" data-header="Budget">$145,000,000</span>
+						<span role="cell" data-header="Action" class="button"><a class="button" href="https://codecanyon.net/item/responsive-css3-data-grids/2581249?ref=quanticalabs" target="_top">Get started</a></span>
+					</div>
+				
+				</div>
+			</div>
+			<!-- TABLE END -->
+			
+		</div>
+	</body>
+</html>
