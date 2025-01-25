@@ -1,0 +1,241 @@
+:root {
+    --border-color: #e9ecef;
+    --background-hover: #f8f9ff;
+    --background-selected: #f1f5ff;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --status-fulltime: #00b894;
+    --status-remote: #0984e3;
+    --status-parttime: #fdcb6e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+/**
+ * Heading Styles
+ * Separate from table with fixed position
+ */
+ h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.table {
+    width: 100%;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 40px 80px 200px 1fr 1fr 1fr 100px 100px 40px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #f8f9fa;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 40px 80px 200px 1fr 1fr 1fr 100px 100px 40px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.table-row:hover {
+    background-color: var(--background-hover);
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+}
+
+.name-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.expand-icon {
+    cursor: pointer;
+    color: var(--text-secondary);
+    margin-right: 8px;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.status-cell {
+    display: flex;
+    align-items: center;
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status.full-time {
+    background-color: rgba(0, 184, 148, 0.1);
+    color: var(--status-fulltime);
+}
+
+.status.remote {
+    background-color: rgba(9, 132, 227, 0.1);
+    color: var(--status-remote);
+}
+
+.status.part-time {
+    background-color: rgba(253, 203, 110, 0.1);
+    color: var(--status-parttime);
+}
+
+.checkbox-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions-cell {
+    display: flex;
+    justify-content: center;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .table-header,
+    .table-row {
+        grid-template-columns: 40px 80px 180px 1fr 1fr 1fr 90px 90px 40px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+    }
+    
+    .table {
+        min-width: 900px;
+    }
+}
+
+/* Checkbox hack for expand/collapse */
+.expand-toggle {
+    display: none;
+}
+
+/* Hide details by default */
+.row-details {
+    display: none;
+    padding: 16px 24px;
+    background-color: var(--background-hover);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Show details when checkbox is checked */
+.expand-toggle:checked ~ .row-details {
+    display: block;
+}
+
+/* Rotate arrow when expanded */
+.expand-toggle:checked ~ .table-row .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Details styling */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.details-title {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.subordinate-item,
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.location-icon,
+.phone-icon,
+.telegram-icon,
+.calendar-icon,
+.person-icon {
+    font-style: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
