@@ -1,0 +1,300 @@
+/**
+ * CSS Variables
+ * Global color definitions
+ */
+:root {
+    --table-header-bg: #f9fafb;
+    --table-bg: #ffffff;
+    --border-color: #eaeaea;
+    --hover-bg: #f8f9ff;
+    --text-dark: #111827;
+    --text-muted: #6b7280;
+    --status-paid: #10b981;
+    --status-refunded: #6b7280;
+    --status-chargeback: #ef4444;
+}
+
+/**
+ * Reset Styles
+ * Basic reset for all elements
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/**
+ * Body Styles
+ * Sets the main background and spacing
+ */
+body {
+    background-color: #f3f4f6;
+    padding: 20px;
+}
+
+
+/**
+ * Container Styles
+ * Main wrapper for the content with card-like appearance
+ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #f3f4f6;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+/**
+ * Table Wrapper Styles
+ * Table wrapper with scrollable content
+ */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/**
+ * Heading Styles
+ * Separate from table with fixed position
+ */
+h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.date-filter {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/**
+ * Table Styles
+ * Modern clean table design with card-like rows
+ */
+.orders-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+/**
+ * Table Cell Styles
+ * Card-like appearance for rows
+ */
+.orders-table th, 
+.orders-table td {
+    padding: 16px 24px;
+    text-align: left;
+    border: none;
+    background: white;
+}
+
+.orders-table td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.orders-table td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/**
+ * Table Header Styles
+ * Subtle header without background
+ */
+.orders-table th {
+    background: transparent;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 24px 16px;
+}
+
+/**
+ * Table Row Styles
+ * Shadow effect on hover
+ */
+.orders-table tbody tr td {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.orders-table tbody tr:hover td {
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+.orders-table td {
+    color: var(--text-dark);
+    font-size: 14px;
+}
+
+/* Status badge styles */
+.status-badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-badge.paid {
+    background-color: #ecfdf5;
+    color: var(--status-paid);
+}
+
+.status-badge.refunded {
+    background-color: #f3f4f6;
+    color: var(--status-refunded);
+}
+
+.status-badge.chargeback {
+    background-color: #fef2f2;
+    color: var(--status-chargeback);
+}
+
+/* Customer column styles */
+.customer-col {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Revenue column styles */
+.revenue {
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Actions column styles */
+.actions {
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+/* Checkbox styles */
+.checkbox-col {
+    width: 40px;
+}
+
+input[type="checkbox"] {
+    accent-color: #4f46e5;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/**
+ * Responsive Design
+ * Adjustments for smaller screens
+ */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 12px 16px;
+    }
+
+    .orders-table {
+        min-width: 800px;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+}
+
+/**
+ * Details Element Styling
+ * Custom styling for the expandable details section
+ */
+.movie-details {
+    position: relative;
+}
+
+.movie-details summary {
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 6px 12px;
+    background: var(--light-primary-bg);
+    border-radius: 4px;
+    display: inline-block;
+    list-style: none;
+    transition: all 0.2s ease;
+}
+
+.movie-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.movie-details summary:hover {
+    background: rgba(68, 97, 242, 0.1);
+    color: var(--primary-color);
+}
+
+.details-content {
+    position: absolute;
+    right: 0;
+    margin-top: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 500px;
+    z-index: 1;
+}
+
+.details-content img {
+    border-radius: 4px;
+    margin-right: 16px;
+    float: left;
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.movie-info {
+    overflow: hidden;
+}
+
+.movie-info p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .details-content {
+        width: 300px;
+    }
+    
+    .details-content img {
+        width: 80px;
+        height: 120px;
+    }
+}

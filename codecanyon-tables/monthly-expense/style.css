@@ -1,0 +1,268 @@
+/**
+ * CSS Variables
+ * Global color definitions
+ */
+:root {
+    --table-header-bg: #2c3e50;
+    --table-bg: #ffffff;
+    --border-color: #eaeaea;
+    --hover-bg: #f8f9ff;
+    
+    /* Category Colors */
+    --housing-color: #3498db;
+    --utilities-color: #2ecc71;
+    --groceries-color: #e74c3c;
+    --transportation-color: #f1c40f;
+    --entertainment-color: #9b59b6;
+    --healthcare-color: #1abc9c;
+    
+    /* Text Colors */
+    --text-light: #ffffff;
+    --text-dark: #2c3e50;
+    --text-muted: #95a5a6;
+}
+
+/**
+ * Reset Styles
+ * Basic reset for all elements
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/**
+ * Body Styles
+ * Sets the main background and spacing
+ */
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+
+/**
+ * Container Styles
+ * Main wrapper for the content with card-like appearance
+ */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+
+/**
+ * Table Wrapper Styles
+ * Table wrapper with scrollable content
+ */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+
+/**
+ * Heading Styles
+ * Separate from table with fixed position
+ */
+ h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+
+
+/**
+ * Table Styles
+ * Modern clean table design
+ */
+.expense-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/**
+ * Table Cell Styles
+ * Clean, modern look with proper spacing
+ */
+.expense-table th, 
+.expense-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/**
+ * Table Header Styles
+ * Light background with subtle text
+ */
+.expense-table th {
+    background-color: var(--table-header-bg);
+    color: var(--text-light);
+    padding: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+
+/**
+ * Table Row Styles
+ * Hover effect and spacing
+ */
+.expense-table tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.expense-table td {
+    color: var(--text-dark);
+    font-size: 14px;
+}
+
+/* Status cell styling */
+.expense-table .status {
+    background: var(--light-primary-bg);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+/**
+ * Responsive Design
+ * Adjustments for smaller screens
+ */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .expense-table th,
+    .expense-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/**
+ * Details Element Styling
+ * Custom styling for the expandable details section
+ */
+.movie-details {
+    position: relative;
+}
+
+.movie-details summary {
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 6px 12px;
+    background: var(--light-primary-bg);
+    border-radius: 4px;
+    display: inline-block;
+    list-style: none;
+    transition: all 0.2s ease;
+}
+
+.movie-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.movie-details summary:hover {
+    background: rgba(68, 97, 242, 0.1);
+    color: var(--primary-color);
+}
+
+.details-content {
+    position: absolute;
+    right: 0;
+    margin-top: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 500px;
+    z-index: 1;
+}
+
+.details-content img {
+    border-radius: 4px;
+    margin-right: 16px;
+    float: left;
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.movie-info {
+    overflow: hidden;
+}
+
+.movie-info p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .details-content {
+        width: 300px;
+    }
+    
+    .details-content img {
+        width: 80px;
+        height: 120px;
+    }
+}
+
+/* Category Row Styles */
+.expense-table tr.housing td:first-child { color: var(--housing-color); }
+.expense-table tr.utilities td:first-child { color: var(--utilities-color); }
+.expense-table tr.groceries td:first-child { color: var(--groceries-color); }
+.expense-table tr.transportation td:first-child { color: var(--transportation-color); }
+.expense-table tr.entertainment td:first-child { color: var(--entertainment-color); }
+.expense-table tr.healthcare td:first-child { color: var(--healthcare-color); }
+
+/* Category Background Styles */
+.expense-table tr.housing:hover { background-color: rgba(52, 152, 219, 0.1); }
+.expense-table tr.utilities:hover { background-color: rgba(46, 204, 113, 0.1); }
+.expense-table tr.groceries:hover { background-color: rgba(231, 76, 60, 0.1); }
+.expense-table tr.transportation:hover { background-color: rgba(241, 196, 15, 0.1); }
+.expense-table tr.entertainment:hover { background-color: rgba(155, 89, 182, 0.1); }
+.expense-table tr.healthcare:hover { background-color: rgba(26, 188, 156, 0.1); }
+
+/* Total Column Styles */
+.expense-table td.total {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* Monthly Total Row Styles */
+.expense-table tr.monthly-total {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.expense-table tr.monthly-total td {
+    border-top: 2px solid var(--border-color);
+}
+
+.expense-table td.grand-total {
+    color: var(--text-dark);
+    font-weight: 700;
+}
