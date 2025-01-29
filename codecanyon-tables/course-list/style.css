@@ -1,0 +1,268 @@
+/**
+ * CSS Variables
+ * Global color definitions
+ */
+:root {
+    --group-bg: #ffffff;
+    --header-bg: rgba(255, 255, 255, 0.2);
+    --text-color: #232323;
+    --text-secondary: #7C7C7C;
+}
+
+/**
+ * Reset Styles
+ * Basic reset for all elements
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Body Styles
+ * Sets the main background and spacing
+ */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #5CD4E9;
+    color: var(--text-color);
+}
+
+/**
+ * Container Styles
+ * Main wrapper for the content with card-like appearance
+ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.groups-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/**
+ * Group Styles
+ * Individual course group styles
+ */
+
+.group {
+    background: white;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.group:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.course-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.course-date {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.prospects {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #F5F5F5;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    margin-right: 40px;
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-group .label {
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.stat-group .value {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Add colored bottom border */
+.group::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #FFB74D; /* Default yellow */
+}
+
+.group.green {
+    border-bottom-color: #4CAF50;
+}
+
+.group.red {
+    border-bottom-color: #FF5252;
+}
+
+.group.green::after {
+    background-color: #4CAF50;
+}
+
+.group.red::after {
+    background-color: #FF5252;
+}
+
+/* Info button and details styles */
+.info-details {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
+.info-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #F5F5F5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-family: serif;
+    font-size: 14px;
+    color: #666;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+
+.info-button:hover {
+    background: #E0E0E0;
+}
+
+/* Remove default details marker */
+.info-details summary {
+    list-style: none;
+}
+
+.info-details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Info content styles */
+.info-content {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.info-content h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.info-content p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+/* Arrow pointer */
+.info-content::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+}
+
+/* Alternative Option: Hover tooltip */
+.info-tooltip {
+    position: relative;
+}
+
+.info-tooltip:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-content {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 200px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+/* Adjust stats margin for info button */
+.stats {
+    margin-right: 40px;
+}
+
+@media (max-width: 1024px) {
+    .groups-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .groups-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .group {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}
