@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 100px;
+}
+
+table {
+    width: 100%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+th, td {
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #808080; /* Gray color */
+    color: white;
+}
+
+td img.product-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+caption {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.rating-stars {
+    color: orange;
+    font-size: 20px;
+}
+.date{
+    font-size: 12px;
+}
+/* Customer Name Hover Effect (Card) */
+.customer-name {
+    position: relative;
+    color: #0073e6;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.customer-name:hover::after {
+    content: attr(data-product) " | " attr(data-phone) " | " attr(data-email);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 1;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-name:hover::after {
+    content: attr(data-product) " | " attr(data-phone) " | " attr(data-email);
+    position: absolute;
+    border: 2px solid #ddd;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 1;
+    border-radius: 8px;
+}
+.customer-name:hover::after span {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Separate the customer details with lines */
+.customer-name:hover::after span::before {
+    content: "";
+    display: block;
+    margin-top: 5px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    td img.product-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Media Query for Smaller Mobile Devices */
+@media (max-width: 480px) {
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    td img.product-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Stack table rows on small screens */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 10px;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}

@@ -1,10 +1,14 @@
+*{
+  box-sizing: border-box;
+}
 h2{
     font-size: 44px;
     text-align: center;
 }
 table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
   }
   table, th, td {
     border: 1px solid black;
@@ -18,8 +22,8 @@ table {
     background-color: #ddd;
   }
   th {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #b2b5dd;
+    color: #333;
   }
   @media screen and (max-width: 600px) {
     table, thead, tbody, th, td, tr { 

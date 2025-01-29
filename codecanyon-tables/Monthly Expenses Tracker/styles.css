@@ -3,20 +3,31 @@ body {
     margin: 0;
     padding: 0;
     background: #f4f4f4;
- }
+    box-sizing: border-box;
+}
  
  h2 {
     text-align: center;
     font-size: 44px;
     color: #333;
  }
- 
+ .user{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+ }
+ img{
+   width: 40px;
+   height: 40px;
+   border-radius: 100%;
+ }
  table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 90%;
     background: #fff;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
     margin: 20px auto;
+    border-radius: 10px;
  }
  
  th, td {
@@ -24,18 +35,29 @@ body {
      text-align: center;
      padding: 15px;
      font-size: 16px;
+     
+    border-radius: 10px;
+     
+ }
+ tr:hover{
+   background: #e1ebf0;
  }
  
  tr:nth-child(even) {
      background-color: #f2f2f2;
  }
+ tr:nth-child(even):hover {
+     background-color: #e1ebf0;
+ }
  
  th {
-    background-color: #4CAF50;
+    background-color: gray;
     color: white;
+    border-radius: 10px;
  }
  
  tr:last-child, tr:last-child td {
     font-weight:bold;
-    background: #f9ca24;
+    background: #e1ebf0;
+    
  }
