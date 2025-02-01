@@ -1,0 +1,134 @@
+/**
+ * Euro 2024 Groups Table
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A responsive and interactive football league table.
+ * Features:
+ * ✓ Responsive design
+ * ✓ Clean and modern styling
+ * ✓ Cross-browser compatibility
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --group-bg: rgba(255, 255, 255, 0.15);
+    --header-bg: rgba(255, 255, 255, 0.2);
+    --text-color: #fff;
+}
+
+/* ===================
+ * 2. Reset & Base
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #5CD4E9;
+    color: var(--text-color);
+}
+
+/* ===================
+ * 3. Container Styles
+ * =================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.groups-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.group {
+    background: var(--group-bg);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.group-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.group-header {
+    background: var(--header-bg);
+}
+
+.group-header th {
+    padding: 15px 10px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.group-header .group-name {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 1.1em;
+    width: 50%;
+}
+
+.team-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 20px;
+}
+
+.team-flag {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.stat-circle {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+td {
+    text-align: center;
+    padding: 16px 0;
+}
+
+span {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===================
+ * 4. Responsive Design
+ * =================== */
+@media (max-width: 1024px) {
+    .groups-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .groups-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .group {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}

@@ -1,0 +1,242 @@
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --table-header-bg: #f9fafb;
+    --table-bg: #ffffff;
+    --border-color: #eaeaea;
+    --hover-bg: #f8f9ff;
+    --text-dark: #111827;
+    --text-muted: #6b7280;
+    --primary-color: #007BFF;
+    --light-primary: #EEF0FF;
+}
+
+/* ===================
+ * 2. Reset & Base Styles
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    padding: 20px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* ===================
+ * 3. Container & Section Styles
+ * =================== */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: var(--table-bg);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+section {
+    padding: 32px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+.section-header {
+    margin-bottom: 24px;
+}
+
+/* ===================
+ * 4. Typography
+ * =================== */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.text-muted {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ===================
+ * 5. Header Styles
+ * =================== */
+header {
+    text-align: center;
+    padding: 32px;
+    background: var(--table-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.huawei {
+    max-width: 300px;
+    height: auto;
+    margin-top: 24px;
+}
+
+/* ===================
+ * 6. Rating Table Styles
+ * =================== */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background: var(--table-header-bg);
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+    background: var(--table-bg);
+}
+
+.bottom-line td {
+    background: var(--light-primary);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-top: 2px solid var(--border-color);
+}
+
+/* ===================
+ * 7. Highlights Styles
+ * =================== */
+.pros-cons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pros-cons li {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: var(--table-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.pros-cons li:last-child {
+    margin-bottom: 0;
+}
+
+/* ===================
+ * 8. Specifications Styles
+ * =================== */
+.spec-item {
+    padding: 24px;
+    background: var(--table-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.spec-item:last-child {
+    margin-bottom: 0;
+}
+
+.spec-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.spec-item p:last-child {
+    margin-bottom: 0;
+}
+
+.spec-item strong {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.spec-item ul {
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+}
+
+.spec-item li {
+    font-size: 14px;
+    color: var(--text-muted);
+    padding: 4px 0;
+}
+
+/* ===================
+ * 9. Responsive Design
+ * =================== */
+@media (max-width: 768px) {
+    section {
+        padding: 24px;
+    }
+
+    .container {
+        margin: 10px;
+    }
+
+    header {
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .huawei {
+        max-width: 200px;
+    }
+
+    .spec-item {
+        padding: 16px;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 13px;
+    }
+}

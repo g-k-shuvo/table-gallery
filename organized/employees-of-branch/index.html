@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees Table</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main Container -->
+    <div class="container">
+      <h1>Employees of Branch</h1>
+
+      <!-- Table -->
+      <div class="table">
+        <!-- Table Header -->
+        <div class="table-header">
+          <div class="header-cell checkbox-cell">
+            <input type="checkbox" />
+          </div>
+          <div class="header-cell id-cell">ID</div>
+          <div class="header-cell name-cell">Name</div>
+          <div class="header-cell">Position</div>
+          <div class="header-cell">Department</div>
+          <div class="header-cell">Email</div>
+          <div class="header-cell">Experience</div>
+          <div class="header-cell">Status</div>
+          <div class="header-cell actions-cell">⋮</div>
+        </div>
+
+        <!-- Table Row Group 1 -->
+        <div class="table-row-group">
+          <!-- Hidden checkbox for toggle -->
+          <input type="checkbox" class="expand-toggle" id="row-1" />
+
+          <!-- Table Row -->
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-1" class="expand-icon">▼</label>
+              143
+            </div>
+            <div class="cell name-cell">
+              <img
+                src="../assets/images/user-male-1.jpg"
+                alt="Evgeni Kondrashev"
+                class="avatar"
+              />
+              <span>Evgeni Kondrashev</span>
+            </div>
+            <div class="cell">Lead iOS developer</div>
+            <div class="cell">iOS development</div>
+            <div class="cell">e.kondrashev@we.com</div>
+            <div class="cell">1 year</div>
+            <div class="cell status-cell">
+              <span class="status full-time">Full-time</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <!-- Details Section -->
+          <div class="row-details">
+            <div class="details-grid">
+              <!-- Office Details -->
+              <div class="details-section">
+                <div class="details-title">Office</div>
+                <div class="details-content">
+                  <i class="location-icon">📍</i>
+                  Minsk, Lenina 34/2
+                </div>
+              </div>
+
+              <!-- Subordinates Details -->
+              <div class="details-section">
+                <div class="details-title">Subordinates</div>
+                <div class="details-content">
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    Audrey Flores
+                  </div>
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    Konstantin Konstantinopolsky
+                  </div>
+                </div>
+              </div>
+
+              <!-- Birthday Details -->
+              <div class="details-section">
+                <div class="details-title">Birthday</div>
+                <div class="details-content">
+                  <i class="calendar-icon">📅</i>
+                  12 December
+                </div>
+              </div>
+
+              <!-- Contacts Details -->
+              <div class="details-section">
+                <div class="details-title">Contacts</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +375 33 127 12 88
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📱</i>
+                    t.me/william12
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Row 2 -->
+        <div class="table-row-group">
+          <input type="checkbox" class="expand-toggle" id="row-2" />
+
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-2" class="expand-icon">▼</label>
+              144
+            </div>
+            <div class="cell name-cell">
+              <img
+                src="../assets/images/user-female-1.jpg"
+                alt=""
+                class="avatar"
+              />
+              <span>Sarah Chen</span>
+            </div>
+            <div class="cell">Senior UX Designer</div>
+            <div class="cell">Design</div>
+            <div class="cell">s.chen@we.com</div>
+            <div class="cell">3 years</div>
+            <div class="cell status-cell">
+              <span class="status part-time">Part-time</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <div class="row-details">
+            <div class="details-grid">
+              <div class="details-section">
+                <div class="details-title">Office</div>
+                <div class="details-content">
+                  <i class="location-icon">📍</i>
+                  Singapore, Marina Bay 15
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Subordinates</div>
+                <div class="details-content">
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    Mike Zhang
+                  </div>
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Birthday</div>
+                <div class="details-content">
+                  <i class="calendar-icon">📅</i>
+                  3 March
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Contacts</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +65 9234 5678
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📱</i>
+                    t.me/sarahc
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Row 3 -->
+        <div class="table-row-group">
+          <input type="checkbox" class="expand-toggle" id="row-3" />
+
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-3" class="expand-icon">▼</label>
+              145
+            </div>
+            <div class="cell name-cell">
+              <img
+                src="../assets/images/user-male-2.jpg"
+                alt=""
+                class="avatar"
+              />
+              <span>Marcus Johnson</span>
+            </div>
+            <div class="cell">Backend Developer</div>
+            <div class="cell">Backend</div>
+            <div class="cell">m.johnson@we.com</div>
+            <div class="cell">2 years</div>
+            <div class="cell status-cell">
+              <span class="status remote">Remote</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <div class="row-details">
+            <div class="details-grid">
+              <div class="details-section">
+                <div class="details-title">Office</div>
+                <div class="details-content">
+                  <i class="location-icon">📍</i>
+                  Remote, USA
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Subordinates</div>
+                <div class="details-content">
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    Lisa Parker
+                  </div>
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    James Wilson
+                  </div>
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Birthday</div>
+                <div class="details-content">
+                  <i class="calendar-icon">📅</i>
+                  15 July
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Contacts</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +1 555 234 5678
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📱</i>
+                    t.me/marcusj
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Row 4 -->
+        <div class="table-row-group">
+          <input type="checkbox" class="expand-toggle" id="row-4" />
+
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-4" class="expand-icon">▼</label>
+              146
+            </div>
+            <div class="cell name-cell">
+              <img
+                src="../assets/images/user-female-2.jpg"
+                alt=""
+                class="avatar"
+              />
+              <span>Emma Rodriguez</span>
+            </div>
+            <div class="cell">Product Manager</div>
+            <div class="cell">Product</div>
+            <div class="cell">e.rodriguez@we.com</div>
+            <div class="cell">4 years</div>
+            <div class="cell status-cell">
+              <span class="status full-time">Full-time</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <div class="row-details">
+            <div class="details-grid">
+              <div class="details-section">
+                <div class="details-title">Office</div>
+                <div class="details-content">
+                  <i class="location-icon">📍</i>
+                  London, Baker Street 221B
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Subordinates</div>
+                <div class="details-content">
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    Tom Baker
+                  </div>
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    Sophie Turner
+                  </div>
+                  <div class="subordinate-item">
+                    <i class="person-icon">👤</i>
+                    David Miller
+                  </div>
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Birthday</div>
+                <div class="details-content">
+                  <i class="calendar-icon">📅</i>
+                  28 September
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Contacts</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +44 20 7123 4567
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📱</i>
+                    t.me/emmarodriguez
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat for other rows -->
+      </div>
+    </div>
+  </body>
+</html>

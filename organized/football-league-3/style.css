@@ -1,0 +1,349 @@
+/**
+ * Football League Table Pro
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A responsive and interactive football league table.
+ * Features:
+ * ✓ Responsive design
+ * ✓ Color-coded rows for league positions
+ * ✓ Clean and modern styling
+ * ✓ Cross-browser compatibility
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --table-header-bg: #f8f9fa;
+    --table-bg: #e9e9e9;
+    --border-color: #e9ecef;
+    --hover-bg: #777a86;
+    --primary-color: #2b2d42;
+    --champions-bg: #e3f8e7;
+    --europa-bg: #fff4e6;
+    --relegation-bg: #fff0f3;
+    --text-dark: #2b2d42;
+    --text-muted: #6c757d;
+}
+
+/* ===================
+ * 2. Reset & Base
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* ===================
+ * 3. Container Styles
+ * =================== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+/* ===================
+ * 4. Table Wrapper
+ * =================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ===================
+ * 5. League Table Styles
+ * =================== */
+.league-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0;
+    background: transparent;
+}
+
+.league-table th, 
+.league-table td {
+    padding: 12px 16px;
+    text-align: center;
+}
+
+.league-table thead th {
+    background-color: transparent;
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+.league-table tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+
+.league-table tbody tr:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.league-table tbody td {
+    font-size: 14px;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+.gap-row {
+    height: 10px;
+}
+
+.team-cell {
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.points {
+    font-weight: 600;
+}
+
+/* ===================
+ * 6. Position-based Styling
+ * =================== */
+.position-cell {
+    border-left: 3px solid transparent;
+}
+
+/* Champions League positions (1-4) */
+tr:nth-child(-n+4) .position-cell {
+    border-left: 3px solid #4CAF50;
+}
+
+/* Europa League positions (5-6) */
+tr:nth-child(n+5):nth-child(-n+6) .position-cell {
+    border-left: 3px solid #2196F3;
+}
+
+/* Mid-table positions (7-9) */
+tr:nth-child(n+7):nth-child(-n+9) .position-cell {
+    border-left: 3px solid #FFC107;
+}
+
+/* Lower mid-table positions (10-11) */
+tr:nth-child(n+10):nth-child(-n+11) .position-cell {
+    border-left: 3px solid #FF9800;
+}
+
+/* Relegation positions (12+) */
+tr:nth-child(n+12) .position-cell {
+    border-left: 3px solid #f44336;
+}
+
+/* ===================
+ * 7. Match History Styles
+ * =================== */
+.match-history {
+    display: flex;
+    align-items: center;
+}
+
+.match-details summary {
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.match-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.result-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in;
+}
+
+.result-circle:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+
+/* When details are open, highlight all circles in the summary */
+.match-details[open] summary .result-circle {
+    opacity: 0.5;
+}
+
+.match-details[open] summary .result-circle:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    border-color: #2b2d42;
+}
+
+
+.result-circle.win {
+    background-color: #4CAF50;
+}
+
+.result-circle.draw {
+    background-color: #FFC107;
+}
+
+.result-circle.loss {
+    background-color: #F44336;
+}
+
+/* Match Details Popup */
+.match-details {
+    position: relative;
+}
+
+.match-details .details-content {
+    position: absolute;
+    right: 0;
+    margin-top: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 350px;
+    z-index: 1;
+    transform: translateX(-50%);
+    left: 50%;
+    right: auto;
+}
+
+/* Styles for popup to be top of the row for bottom teams (last 4 rows) */
+tr:nth-last-child(-n+8) .match-details .details-content {
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.match-info h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.match-item {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.match-item:last-child {
+    border-bottom: none;
+}
+
+.match-date {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.match-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.match-teams .team {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.match-teams .team-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.match-teams strong {
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+.match-teams span {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.match-stats {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.match-stats p {
+    margin-bottom: 4px;
+}
+
+/* ===================
+ * 8. Responsive Design
+ * =================== */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .league-table th,
+    .league-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .team-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .match-details .details-content {
+        width: 280px;
+        transform: translateX(-50%);
+        left: 50%;
+        max-width: calc(100vw - 40px);
+    }
+}
+
+/* Handle right edge cases */
+tr td:last-child .match-details .details-content {
+    left: auto;
+    right: 0;
+    transform: none;
+}
+
+/* Handle left edge cases */
+tr td:first-child .match-details .details-content {
+    left: 0;
+    right: auto;
+    transform: none;
+}

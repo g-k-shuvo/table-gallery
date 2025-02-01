@@ -1,0 +1,189 @@
+/**
+ * Product Compare Table
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A responsive and clean product comparison table.
+ * Features:
+ * ✓ Responsive design
+ * ✓ Clean and modern styling
+ * ✓ Cross-browser compatibility
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --table-header-bg: #ffffff;
+    --table-bg: #ffffff;
+    --border-color: #e5e7eb;
+    --hover-bg: #f9fafb;
+    --snagit-color: #0072bc;
+    --camtasia-color: #78b800;
+    --morae-color: #008080;
+    --relay-color: #c23b21;
+    --screencast-color: #ff8c00;
+    --coach-color: #0072bc;
+    --bg-snagit: #f8fafc;
+    --bg-camtasia: #f7faf4;
+    --bg-morae: #f5fafa;
+    --bg-relay: #fdf5f4;
+    --bg-screencast: #fff9f2;
+    --bg-coach: #f5f9ff;
+}
+
+/* ===================
+ * 2. Reset & Base Styles
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* ===================
+ * 3. Container Styles
+ * =================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================
+ * 4. Table Wrapper Styles
+ * =================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ===================
+ * 5. Heading Styles
+ * =================== */
+h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+/* ===================
+ * 6. Table Styles
+ * =================== */
+.products-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-color);
+}
+
+.products-table th {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+.product-header {
+    min-width: 140px;
+}
+
+.product-header.snagit { background-color: var(--snagit-color); }
+.product-header.camtasia { background-color: var(--camtasia-color); }
+.product-header.morae { background-color: var(--morae-color); }
+.product-header.relay { background-color: var(--relay-color); }
+.product-header.screencast { background-color: var(--screencast-color); }
+.product-header.coach { background-color: var(--coach-color); }
+
+.products-table td {
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.products-table tr td:first-child {
+    text-align: left;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+/* Column backgrounds */
+.products-table tr td:nth-child(2) { background-color: var(--bg-snagit); }
+.products-table tr td:nth-child(3) { background-color: var(--bg-camtasia); }
+.products-table tr td:nth-child(4) { background-color: var(--bg-morae); }
+.products-table tr td:nth-child(5) { background-color: var(--bg-relay); }
+.products-table tr td:nth-child(6) { background-color: var(--bg-screencast); }
+.products-table tr td:nth-child(7) { background-color: var(--bg-coach); }
+
+/* Feature Dot Styles */
+.feature-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.feature-dot.blue { background-color: var(--snagit-color); }
+.feature-dot.green { background-color: var(--camtasia-color); }
+.feature-dot.teal { background-color: var(--morae-color); }
+.feature-dot.red { background-color: var(--relay-color); }
+.feature-dot.orange { background-color: var(--screencast-color); }
+
+/* Platform Icons Styles */
+.platform-icons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon.windows {
+    background-image: url('../assets/images/windows.png');
+}
+
+.icon.mac {
+    background-image: url('../assets/images/mac.png');
+}
+
+.icon.android {
+    background-image: url('../assets/images/android.png');
+}
+
+/* Text Colors */
+.text-blue { color: var(--snagit-color); }
+.text-green { color: var(--camtasia-color); }
+.text-teal { color: var(--morae-color); }
+.text-red { color: var(--relay-color); }
+.text-orange { color: var(--screencast-color); }
+
+/* ===================
+ * 7. Responsive Design
+ * =================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

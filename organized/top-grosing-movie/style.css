@@ -1,0 +1,213 @@
+/**
+ * Top Grossing Movies Table
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A responsive and clean table for displaying top-grossing movies.
+ * Features:
+ * ✓ Responsive design
+ * ✓ Clean and modern styling
+ * ✓ Cross-browser compatibility
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --table-header-bg: #e9eaf5;
+    --table-bg: #fcfdfd;
+    --border-color: #eaeaea;
+    --hover-bg: #f8f9ff;
+    --primary-color: #4461F2;
+    --light-primary-bg: #EEF0FF;
+    --text-dark: #333;
+    --text-muted: #666;
+}
+
+/* ===================
+ * 2. Reset & Base Styles
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* ===================
+ * 3. Container Styles
+ * =================== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================
+ * 4. Table Wrapper Styles
+ * =================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ===================
+ * 5. Heading Styles
+ * =================== */
+h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+/* ===================
+ * 6. Table Styles
+ * =================== */
+.movies-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--table-bg);
+}
+
+.movies-table th,
+.movies-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.movies-table th {
+    background-color: var(--table-header-bg);
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: none;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.movies-table tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.movies-table td {
+    color: var(--text-dark);
+    font-size: 14px;
+}
+
+/* ===================
+ * 7. Details Element Styling
+ * =================== */
+.movie-details {
+    position: relative;
+}
+
+.movie-details summary {
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 6px 12px;
+    background: var(--light-primary-bg);
+    border-radius: 4px;
+    display: inline-block;
+    list-style: none;
+    transition: all 0.2s ease;
+}
+
+/* Add styles for active/open state */
+.movie-details[open] summary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.movie-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.movie-details summary:hover {
+    background: rgba(68, 97, 242, 0.1);
+    color: var(--primary-color);
+}
+
+.movie-details[open] summary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.details-content {
+    position: absolute;
+    right: 0;
+    margin-top: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    z-index: 1;
+}
+
+tr:nth-last-child(-n+3) .movie-details .details-content {
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+tr:not(:nth-last-child(-n+3)) .movie-details .details-content {
+    top: 100%;
+    margin-top: 12px;
+}
+
+.details-content img {
+    border-radius: 4px;
+    margin-right: 16px;
+    float: left;
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.movie-info {
+    overflow: hidden;
+}
+
+.movie-info p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+/* ===================
+ * 8. Responsive Design
+ * =================== */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .movies-table th,
+    .movies-table td {
+        min-width: 120px;
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .details-content {
+        width: 300px;
+    }
+
+    .details-content img {
+        width: 80px;
+        height: 120px;
+    }
+}

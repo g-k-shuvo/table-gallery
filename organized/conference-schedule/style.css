@@ -1,0 +1,311 @@
+/**
+ * Conference Schedule Table Pro
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A premium, responsive conference schedule table with interactive features.
+ * Features:
+ * ✓ Color-coded session types
+ * ✓ Interactive session popups
+ * ✓ Responsive design for all devices
+ * ✓ Custom hover effects
+ * ✓ Smooth animations
+ * ✓ Cross-browser compatibility
+ * ✓ Easy customization
+ * ✓ Mobile-optimized layout
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --table-header-bg: #1a237e;
+    --table-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --hover-bg: #f5f5f5;
+    
+    /* Session Colors */
+    --keynote-color: #3949ab;
+    --track1-color: #00897b;
+    --track2-color: #7cb342;
+    --break-color: #fb8c00;
+    --workshop-color: #8e24aa;
+    
+    /* Text Colors */
+    --text-light: #ffffff;
+    --text-dark: #263238;
+    --text-muted: #757575;
+}
+
+/* ===================
+ * 2. Reset Styles
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===================
+ * 3. Layout & Container
+ * =================== */
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+/* ===================
+ * 4. Table Core Styles
+ * =================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    position: relative;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.schedule-table th {
+    background-color: var(--table-header-bg);
+    color: var(--text-light);
+    padding: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.schedule-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Alternating row colors */
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* ===================
+ * 5. Session Type Styles
+ * =================== */
+.schedule-table tr.keynote { background-color: rgba(57, 73, 171, 0.1); }
+.schedule-table tr.track-1 { background-color: rgba(0, 137, 123, 0.1); }
+.schedule-table tr.track-2 { background-color: rgba(124, 179, 66, 0.1); }
+.schedule-table tr.break { background-color: rgba(251, 140, 0, 0.1); }
+.schedule-table tr.workshop { background-color: rgba(142, 36, 170, 0.1); }
+
+/* ===================
+ * 6. Interactive Elements
+ * =================== */
+.schedule-table tbody tr:hover {
+    background-color: var(--hover-bg);
+    transition: background-color 0.2s ease;
+}
+
+.schedule-table td:first-child {
+    font-weight: 500;
+    color: var(--text-dark);
+    white-space: nowrap;
+}
+
+.schedule-table td:nth-child(3) {
+    color: var(--text-muted);
+}
+
+.schedule-table td:last-child {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* ===================
+ * 7. Responsive Design
+ * =================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .schedule-table td:first-child {
+        min-width: 100px;
+    }
+}
+
+/* ===================
+ * 8. Session Details Popup
+ * =================== */
+.session-details {
+    position: relative;
+    cursor: pointer;
+}
+
+.session-name {
+    color: var(--text-dark);
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+}
+
+.popup-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 400px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 20px;
+    z-index: 1000;
+    color: var(--text-dark);
+    text-align: left;
+}
+
+.session-details:hover .popup-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup-content h3 {
+    color: var(--table-header-bg);
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.popup-content p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.popup-content strong {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.session-time,
+.session-speaker,
+.session-room {
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.session-description,
+.speaker-bio {
+    margin-top: 12px;
+}
+
+/* ===================
+ * 9. Custom Scrollbar
+ * =================== */
+.popup-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* ===================
+ * 10. Responsive Popup
+ * =================== */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 280px;
+        font-size: 13px;
+    }
+    
+    .popup-content h3 {
+        font-size: 15px;
+    }
+}
+
+/* Position popup based on viewport edges */
+.session-details:hover .popup-content {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+    .session-details:hover .popup-content {
+        left: auto;
+        right: 0;
+        transform: none;
+    }
+    
+    tr:first-child .session-details:hover .popup-content {
+        top: 0;
+    }
+    
+    tr:last-child .session-details:hover .popup-content {
+        bottom: 100%;
+        top: auto;
+    }
+
+    /* For rows near the bottom */
+    tr:nth-last-child(-n+5) .session-details .popup-content {
+        bottom: 100%;
+        top: auto;
+    }
+}
+
+/* Add subtle animation */
+.popup-content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.session-details:hover .popup-content {
+    opacity: 1;
+}

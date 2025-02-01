@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order Summary Table - Track purchases and totals">
+    <meta name="author" content="Your Name">
+    <title>Order Summary</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Table Header -->
+        <div class="table-header">
+            <h1>Orders</h1>
+            <div class="date-filter">
+                <span class="date-label">30 Sep, 23:01</span>
+            </div>
+        </div>
+
+        <!-- Table Wrapper -->
+        <div class="table-wrapper">
+            <table class="orders-table">
+                <!-- Table Header -->
+                <thead>
+                    <tr>
+                        <th class="checkbox-col">
+                            <input type="checkbox" id="selectAll">
+                        </th>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Customer</th>
+                        <th>Purchased</th>
+                        <th>Revenue</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <!-- Table Body -->
+                <tbody>
+                    <!-- Row 1 -->
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1019</td>
+                        <td>1 Oct, 14:42</td>
+                        <td><span class="status-badge paid">Paid</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-female-1.jpg" alt="Gracyn Schaefer" class="avatar">
+                            <span>Gracyn Schaefer</span>
+                        </td>
+                        <td>Wireframing Kit for Figma</td>
+                        <td class="revenue">$9.99</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+
+                    <!-- Row 2 -->
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1018</td>
+                        <td>30 Sep, 23:01</td>
+                        <td><span class="status-badge paid">Paid</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-male-1.jpg" alt="Athan Travis" class="avatar">
+                            <span>Athan Travis</span>
+                        </td>
+                        <td>Mastering the Grid + 2 more</td>
+                        <td class="revenue">$228.88</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1017</td>
+                        <td>30 Sep, 21:21</td>
+                        <td><span class="status-badge refunded">Refunded</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-female-2.jpg" alt="" class="avatar">
+                            <span>Mira Chen</span>
+                        </td>
+                        <td>UI Component Library</td>
+                        <td class="revenue">$49.00</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1016</td>
+                        <td>29 Sep, 09:32</td>
+                        <td><span class="status-badge paid">Paid</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-male-2.jpg" alt="" class="avatar">
+                            <span>Marcus Kim</span>
+                        </td>
+                        <td>Design System Pro</td>
+                        <td class="revenue">$149.00</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1015</td>
+                        <td>28 Sep, 18:15</td>
+                        <td><span class="status-badge chargeback">Chargeback</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-female-3.jpg" alt="" class="avatar">
+                            <span>Sofia Patel</span>
+                        </td>
+                        <td>Icon Pack Premium</td>
+                        <td class="revenue">$29.99</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1014</td>
+                        <td>28 Sep, 15:45</td>
+                        <td><span class="status-badge paid">Paid</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-male-3.jpg" alt="" class="avatar">
+                            <span>Lucas Rodriguez</span>
+                        </td>
+                        <td>Animation Templates Bundle</td>
+                        <td class="revenue">$79.00</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1013</td>
+                        <td>28 Sep, 12:30</td>
+                        <td><span class="status-badge paid">Paid</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-female-4.jpg" alt="" class="avatar">
+                            <span>Emma Thompson</span>
+                        </td>
+                        <td>UX Research Kit + 1 more</td>
+                        <td class="revenue">$89.98</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1012</td>
+                        <td>27 Sep, 22:46</td>
+                        <td><span class="status-badge refunded">Refunded</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-male-4.jpg" alt="" class="avatar">
+                            <span>Alexander Wright</span>
+                        </td>
+                        <td>Prototype Toolkit Pro</td>
+                        <td class="revenue">$199.00</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1011</td>
+                        <td>27 Sep, 17:12</td>
+                        <td><span class="status-badge paid">Paid</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-female-5.jpg" alt="" class="avatar">
+                            <span>Isabella Garcia</span>
+                        </td>
+                        <td>Design System Essentials</td>
+                        <td class="revenue">$59.99</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>#1010</td>
+                        <td>27 Sep, 11:58</td>
+                        <td><span class="status-badge paid">Paid</span></td>
+                        <td class="customer-col">
+                            <img src="../assets/images/user-male-5.jpg" alt="" class="avatar">
+                            <span>William Chen</span>
+                        </td>
+                        <td>UI Kit Complete Collection</td>
+                        <td class="revenue">$299.00</td>
+                        <td class="actions">⋮</td>
+                    </tr>
+
+                    <!-- Repeat for other rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

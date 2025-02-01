@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Feedback</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Customer Feedback</h1>
+
+      <!-- Table -->
+      <div class="table">
+        <!-- Table Header -->
+        <div class="table-header">
+          <div class="header-cell checkbox-cell">
+            <input type="checkbox" />
+          </div>
+          <div class="header-cell id-cell">ID</div>
+          <div class="header-cell name-cell">Customer</div>
+          <div class="header-cell">Product</div>
+          <div class="header-cell">Rating</div>
+          <div class="header-cell">Date</div>
+          <div class="header-cell">Sentiment</div>
+          <div class="header-cell">Status</div>
+          <div class="header-cell actions-cell">⋮</div>
+        </div>
+
+        <!-- Table Row Group 1 -->
+        <div class="table-row-group">
+          <input type="checkbox" class="expand-toggle" id="row-1" />
+
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-1" class="expand-icon">▼</label>
+              #F143
+            </div>
+            <div class="cell name-cell">
+              <img src="../assets/images/user-male-1.jpg" alt="John Smith" class="avatar" />
+              <span>John Smith</span>
+            </div>
+            <div class="cell">iPhone 14 Pro</div>
+            <div class="cell">⭐⭐⭐⭐⭐</div>
+            <div class="cell">2023-12-15</div>
+            <div class="cell">Positive</div>
+            <div class="cell status-cell">
+              <span class="status verified">Verified</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <!-- Details Section -->
+          <div class="row-details">
+            <div class="details-grid">
+              <!-- Feedback Details -->
+              <div class="details-section">
+                <div class="details-title">Feedback</div>
+                <div class="details-content">
+                  "Absolutely love this phone! The camera quality is outstanding and the battery life is impressive. 
+                  The dynamic island feature is innovative and useful."
+                </div>
+              </div>
+
+              <!-- Product Details -->
+              <div class="details-section">
+                <div class="details-title">Purchase Details</div>
+                <div class="details-content">
+                  <div class="purchase-date">
+                    <i class="calendar-icon">📅</i>
+                    Purchased: Dec 1, 2023
+                  </div>
+                  <div class="purchase-date">
+                    <i class="location-icon">🏪</i>
+                    Store: Apple Store NYC
+                  </div>
+                </div>
+              </div>
+
+              <!-- Response Status -->
+              <div class="details-section">
+                <div class="details-title">Response Status</div>
+                <div class="details-content">
+                  <i class="calendar-icon">✅</i>
+                  Responded on Dec 16
+                </div>
+              </div>
+
+              <!-- Contact Information -->
+              <div class="details-section">
+                <div class="details-title">Contact Info</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +1 555-123-4567
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📧</i>
+                    john.smith@email.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Row 2 -->
+        <div class="table-row-group">
+          <input type="checkbox" class="expand-toggle" id="row-2" />
+
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-2" class="expand-icon">▼</label>
+              #F144
+            </div>
+            <div class="cell name-cell">
+              <img src="../assets/images/user-female-1.jpg" alt="Sarah Chen" class="avatar" />
+              <span>Sarah Chen</span>
+            </div>
+            <div class="cell">MacBook Air M2</div>
+            <div class="cell">⭐⭐⭐</div>
+            <div class="cell">2023-12-14</div>
+            <div class="cell">Mixed</div>
+            <div class="cell status-cell">
+              <span class="status pending">Pending</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <div class="row-details">
+            <div class="details-grid">
+              <div class="details-section">
+                <div class="details-title">Feedback</div>
+                <div class="details-content">
+                  "Experiencing serious screen flickering issues. Device becomes unresponsive frequently. 
+                  Very disappointed with the performance given the premium price point."
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Purchase Details</div>
+                <div class="details-content">
+                  <div class="purchase-date">
+                    <i class="calendar-icon">📅</i>
+                    Purchased: Nov 30, 2023
+                  </div>
+                  <div class="purchase-date">
+                    <i class="location-icon">🏪</i>
+                    Store: Best Buy Electronics
+                  </div>
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Response Status</div>
+                <div class="details-content">
+                  <i class="calendar-icon">⚠️</i>
+                  Awaiting urgent response
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Contact Info</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +1 555-789-0123
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📧</i>
+                    emma.w@email.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Row 3 -->
+        <div class="table-row-group">
+          <input type="checkbox" class="expand-toggle" id="row-3" />
+
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-3" class="expand-icon">▼</label>
+              #F145
+            </div>
+            <div class="cell name-cell">
+              <img src="../assets/images/user-male-2.jpg" alt="Michael Rodriguez" class="avatar" />
+              <span>Michael Rodriguez</span>
+            </div>
+            <div class="cell">AirPods Pro</div>
+            <div class="cell">⭐⭐⭐⭐</div>
+            <div class="cell">2023-12-13</div>
+            <div class="cell">Positive</div>
+            <div class="cell status-cell">
+              <span class="status verified">Verified</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <div class="row-details">
+            <div class="details-grid">
+              <div class="details-section">
+                <div class="details-title">Feedback</div>
+                <div class="details-content">
+                  "Great noise cancellation and sound quality. The spatial audio feature is amazing for movies. 
+                  Only complaint is that battery life could be better."
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Purchase Details</div>
+                <div class="details-content">
+                  <div class="purchase-date">
+                    <i class="calendar-icon">📅</i>
+                    Purchased: Dec 5, 2023
+                  </div>
+                  <div class="purchase-date">
+                    <i class="location-icon">🏪</i>
+                    Store: Online Apple Store
+                  </div>
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Response Status</div>
+                <div class="details-content">
+                  <i class="calendar-icon">✅</i>
+                  Responded on Dec 14
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Contact Info</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +1 555-987-6543
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📧</i>
+                    m.rodriguez@email.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Row 4 -->
+        <div class="table-row-group">
+          <input type="checkbox" class="expand-toggle" id="row-4" />
+
+          <div class="table-row">
+            <div class="cell checkbox-cell">
+              <input type="checkbox" />
+            </div>
+            <div class="cell id-cell">
+              <label for="row-4" class="expand-icon">▼</label>
+              #F146
+            </div>
+            <div class="cell name-cell">
+              <img src="../assets/images/user-female-2.jpg" alt="Emma Watson" class="avatar" />
+              <span>Emma Watson</span>
+            </div>
+            <div class="cell">iPad Pro 12.9"</div>
+            <div class="cell">⭐⭐</div>
+            <div class="cell">2023-12-12</div>
+            <div class="cell">Negative</div>
+            <div class="cell status-cell">
+              <span class="status rejected">Rejected</span>
+            </div>
+            <div class="cell actions-cell">⋮</div>
+          </div>
+
+          <div class="row-details">
+            <div class="details-grid">
+              <div class="details-section">
+                <div class="details-title">Feedback</div>
+                <div class="details-content">
+                  "Experiencing serious screen flickering issues. Device becomes unresponsive frequently. 
+                  Very disappointed with the performance given the premium price point."
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Purchase Details</div>
+                <div class="details-content">
+                  <div class="purchase-date">
+                    <i class="calendar-icon">📅</i>
+                    Purchased: Nov 30, 2023
+                  </div>
+                  <div class="purchase-date">
+                    <i class="location-icon">🏪</i>
+                    Store: Best Buy Electronics
+                  </div>
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Response Status</div>
+                <div class="details-content">
+                  <i class="calendar-icon">⚠️</i>
+                  Awaiting urgent response
+                </div>
+              </div>
+
+              <div class="details-section">
+                <div class="details-title">Contact Info</div>
+                <div class="details-content">
+                  <div class="contact-item">
+                    <i class="phone-icon">📞</i>
+                    +1 555-789-0123
+                  </div>
+                  <div class="contact-item">
+                    <i class="telegram-icon">📧</i>
+                    emma.w@email.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

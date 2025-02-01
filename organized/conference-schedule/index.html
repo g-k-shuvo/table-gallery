@@ -1,0 +1,276 @@
+<!--
+/**
+ * Conference Schedule Template
+ * 
+ * A responsive and interactive conference schedule template with popup details.
+ * Features:
+ * - Responsive table layout
+ * - Interactive session popups
+ * - Different session types (keynote, tracks, workshops)
+ * - Detailed speaker information
+ * - Time-based styling
+ * 
+ * @author Your Name
+ * @version 1.0.0
+ * @license Commercial
+ */
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conference Schedule - Track sessions and speakers">
+    <meta name="author" content="Your Name" />
+    <title>Conference Schedule</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TechConf 2024 Schedule - Day 1</h1>
+        <div class="table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <!-- Table Header -->
+                    <tr>
+                        <th>Time</th>
+                        <th>Session</th>
+                        <th>Speaker</th>
+                        <th>Room</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Morning Sessions -->
+                    <tr class="morning">
+                        <td>09:00 - 10:00</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Registration & Breakfast</span>
+                                <div class="popup-content">
+                                    <h3>Registration & Breakfast</h3>
+                                    <p class="session-time"><strong>Time:</strong> 09:00 - 10:00</p>
+                                    <p class="session-room"><strong>Room:</strong> Main Hall</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Start your day with registration and a complimentary breakfast. Network with fellow attendees and pick up your conference materials.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>-</td>
+                        <td>Main Hall</td>
+                    </tr>
+
+                    <!-- Keynote Session -->
+                    <tr class="keynote">
+                        <td>10:00 - 11:00</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Opening Keynote: Future of Tech</span>
+                                <div class="popup-content">
+                                    <h3>Opening Keynote: Future of Tech</h3>
+                                    <p class="session-time"><strong>Time:</strong> 10:00 - 11:00</p>
+                                    <p class="session-speaker"><strong>Speaker:</strong> Sarah Johnson</p>
+                                    <p class="session-room"><strong>Room:</strong> Auditorium A</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Join Sarah Johnson as she explores emerging technology trends and their impact on the future of software development. This keynote will cover AI, quantum computing, and sustainable tech practices.</p>
+                                    </div>
+                                    <div class="speaker-bio">
+                                        <strong>Speaker Bio:</strong>
+                                        <p>Sarah Johnson is a renowned tech visionary and CEO of Future Tech Labs, with over 15 years of experience in emerging technologies.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Sarah Johnson</td>
+                        <td>Auditorium A</td>
+                    </tr>
+
+                    <!-- Track Sessions -->
+                    <tr class="track-1">
+                        <td>11:15 - 12:15</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">AI in Modern Applications</span>
+                                <div class="popup-content">
+                                    <h3>AI in Modern Applications</h3>
+                                    <p class="session-time"><strong>Time:</strong> 11:15 - 12:15</p>
+                                    <p class="session-speaker"><strong>Speaker:</strong> Dr. Michael Chen</p>
+                                    <p class="session-room"><strong>Room:</strong> Room 101</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Explore practical applications of AI in modern software development. Learn about machine learning integration, neural networks, and real-world AI implementation strategies.</p>
+                                    </div>
+                                    <div class="speaker-bio">
+                                        <strong>Speaker Bio:</strong>
+                                        <p>Dr. Michael Chen is an AI researcher and lead scientist at AI Solutions Inc., specializing in practical applications of machine learning.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Dr. Michael Chen</td>
+                        <td>Room 101</td>
+                    </tr>
+
+                    <!-- Track Sessions -->
+                    <tr class="track-2">
+                        <td>11:15 - 12:15</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Web Development Best Practices</span>
+                                <div class="popup-content">
+                                    <h3>Web Development Best Practices</h3>
+                                    <p class="session-time"><strong>Time:</strong> 11:15 - 12:15</p>
+                                    <p class="session-speaker"><strong>Speaker:</strong> Emily Rodriguez</p>
+                                    <p class="session-room"><strong>Room:</strong> Room 102</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Discover modern web development practices, including performance optimization, accessibility standards, and progressive web apps. Learn about the latest tools and frameworks.</p>
+                                    </div>
+                                    <div class="speaker-bio">
+                                        <strong>Speaker Bio:</strong>
+                                        <p>Emily Rodriguez is a senior web developer at WebTech Solutions and a frequent speaker on modern web development practices.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Emily Rodriguez</td>
+                        <td>Room 102</td>
+                    </tr>
+
+                    <!-- Break -->
+                    <tr class="break">
+                        <td>12:15 - 13:30</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Lunch Break</span>
+                                <div class="popup-content">
+                                    <h3>Lunch Break</h3>
+                                    <p class="session-time"><strong>Time:</strong> 12:15 - 13:30</p>
+                                    <p class="session-room"><strong>Room:</strong> Dining Hall</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Enjoy a catered lunch while networking with fellow attendees. Various dietary options available including vegetarian and gluten-free.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>-</td>
+                        <td>Dining Hall</td>
+                    </tr>
+
+                    <!-- Track Sessions -->
+                    <tr class="track-1">
+                        <td>13:30 - 14:30</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Cloud Architecture Patterns</span>
+                                <div class="popup-content">
+                                    <h3>Cloud Architecture Patterns</h3>
+                                    <p class="session-time"><strong>Time:</strong> 13:30 - 14:30</p>
+                                    <p class="session-speaker"><strong>Speaker:</strong> Alex Thompson</p>
+                                    <p class="session-room"><strong>Room:</strong> Room 101</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Learn about modern cloud architecture patterns, microservices, serverless computing, and best practices for scalable cloud solutions.</p>
+                                    </div>
+                                    <div class="speaker-bio">
+                                        <strong>Speaker Bio:</strong>
+                                        <p>Alex Thompson is a cloud architect at CloudScale Systems with extensive experience in designing large-scale cloud solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Alex Thompson</td>
+                        <td>Room 101</td>
+                    </tr>
+
+                    <!-- Track Sessions -->
+                    <tr class="track-2">
+                        <td>13:30 - 14:30</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Mobile App Development</span>
+                                <div class="popup-content">
+                                    <h3>Mobile App Development</h3>
+                                    <p class="session-time"><strong>Time:</strong> 13:30 - 14:30</p>
+                                    <p class="session-speaker"><strong>Speaker:</strong> Lisa Park</p>
+                                    <p class="session-room"><strong>Room:</strong> Room 102</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Explore modern mobile app development techniques, cross-platform frameworks, and strategies for creating engaging mobile experiences.</p>
+                                    </div>
+                                    <div class="speaker-bio">
+                                        <strong>Speaker Bio:</strong>
+                                        <p>Lisa Park is a mobile development expert and lead developer at MobileFirst Apps, specializing in cross-platform development.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Lisa Park</td>
+                        <td>Room 102</td>
+                    </tr>
+
+                    <!-- Workshop -->
+                    <tr class="workshop">
+                        <td>14:45 - 16:45</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Hands-on Workshop: Docker & K8s</span>
+                                <div class="popup-content">
+                                    <h3>Hands-on Workshop: Docker & K8s</h3>
+                                    <p class="session-time"><strong>Time:</strong> 14:45 - 16:45</p>
+                                    <p class="session-speaker"><strong>Speaker:</strong> James Wilson</p>
+                                    <p class="session-room"><strong>Room:</strong> Lab 201</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>A practical workshop on containerization with Docker and orchestration with Kubernetes. Bring your laptop for hands-on exercises.</p>
+                                    </div>
+                                    <div class="speaker-bio">
+                                        <strong>Speaker Bio:</strong>
+                                        <p>James Wilson is a DevOps engineer and certified Kubernetes administrator with extensive experience in container orchestration.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>James Wilson</td>
+                        <td>Lab 201</td>
+                    </tr>
+
+                    <!-- Closing -->
+                    <tr class="closing">
+                        <td>17:00 - 17:30</td>
+                        <td>
+                            <div class="session-details">
+                                <span class="session-name">Closing Remarks</span>
+                                <div class="popup-content">
+                                    <h3>Closing Remarks</h3>
+                                    <p class="session-time"><strong>Time:</strong> 17:00 - 17:30</p>
+                                    <p class="session-speaker"><strong>Speaker:</strong> Conference Chair</p>
+                                    <p class="session-room"><strong>Room:</strong> Auditorium A</p>
+                                    <div class="session-description">
+                                        <strong>Description:</strong>
+                                        <p>Wrap-up of the day's events, key takeaways, and preview of upcoming conference activities. Information about networking events will be shared.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Conference Chair</td>
+                        <td>Auditorium A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

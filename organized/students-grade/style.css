@@ -1,0 +1,162 @@
+/**
+ * Students Grade Table
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A responsive and clean students grade table.
+ * Features:
+ * ✓ Responsive design
+ * ✓ Clean and modern styling
+ * ✓ Cross-browser compatibility
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --table-header-bg: #f8f9fa;
+    --table-bg: #ffffff;
+    --border-color: #e9ecef;
+    --hover-bg: #f8f9ff;
+    --primary-color: #2b2d42;
+    --passed-color: #28a745;
+    --conditional-color: #ffc107;
+    --failed-color: #dc3545;
+    --text-dark: #2b2d42;
+    --text-muted: #6c757d;
+}
+
+/* ===================
+ * 2. Reset & Base Styles
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* ===================
+ * 3. Container Styles
+ * =================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================
+ * 4. Table Wrapper Styles
+ * =================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ===================
+ * 5. Heading Styles
+ * =================== */
+h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+/* ===================
+ * 6. Table Styles
+ * =================== */
+.grades-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--table-bg);
+}
+
+.grades-table th,
+.grades-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grades-table th {
+    background-color: var(--table-header-bg);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.grades-table td {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.student-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.student-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.percentage {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.status.passed {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--passed-color);
+}
+
+.status.conditional {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--conditional-color);
+}
+
+.status.failed {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--failed-color);
+}
+
+/* ===================
+ * 7. Responsive Design
+ * =================== */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .grades-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .grades-table th,
+    .grades-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .student-img {
+        width: 40px;
+        height: 40px;
+    }
+}

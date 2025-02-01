@@ -1,0 +1,684 @@
+<!--
+/**
+ * Football League Table Pro
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A responsive and interactive football league table with interactive details.
+ * Features:
+ * - Responsive table layout
+ * - Interactive details popup
+ * - Customizable league information
+ * - Mobile-optimized design
+ * 
+ * @author Your Name
+ * @version 1.0.0
+ * @license Commercial
+ */
+-->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Football League Table - Responsive HTML and CSS table">
+    <meta name="author" content="Your Name">
+    <title>Premier League Standings</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Premier League Standings</h1>
+        <div class="table-wrapper">
+            <table class="league-table">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Team</th>
+                        <th>Played</th>
+                        <th>Won</th>
+                        <th>Drawn</th>
+                        <th>Lost</th>
+                        <th>GD</th>
+                        <th>Points</th>
+                        <th>Last 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Team 1: Arsenal -->
+                    <tr>
+                        <td class="position-cell">1</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/arsenal.png" alt="Arsenal" class="team-logo">
+                            Arsenal
+                        </td>
+                        <td>32</td>
+                        <td>23</td>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>+46</td>
+                        <td class="points">75</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle win" title="Won vs Chelsea (3-1)"></span>
+                                        <span class="result-circle win" title="Won vs Newcastle (2-0)"></span>
+                                        <span class="result-circle draw" title="Draw vs Liverpool (2-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Man City (1-2)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (4-1)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/arsenal.png" alt="Arsenal" class="team-logo">
+                                                        <span>Arsenal</span>
+                                                    </div>
+                                                    <strong>3 - 1</strong>
+                                                    <div class="team">
+                                                        <span>Chelsea</span>
+                                                        <img src="../assets/images/chelsea.png" alt="Chelsea" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Saka (2), Odegaard, Havertz</p>
+                                                    <p><strong>Possession:</strong> 58% - 42%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 2: Manchester City -->
+                    <tr>
+                        <td class="position-cell">2</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/manchestercity.png" alt="Manchester City" class="team-logo">
+                            Manchester City
+                        </td>
+                        <td>31</td>
+                        <td>22</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>+45</td>
+                        <td class="points">70</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle win" title="Won vs Arsenal (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Chelsea (2-0)"></span>
+                                        <span class="result-circle draw" title="Draw vs Liverpool (1-1)"></span>
+                                        <span class="result-circle loss" title="Lost vs Tottenham (2-3)"></span>
+                                        <span class="result-circle loss" title="Lost vs Newcastle (1-2)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/manchestercity.png" alt="Manchester City" class="team-logo">
+                                                        <span>Manchester City</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Arsenal</span>
+                                                        <img src="../assets/images/arsenal.png" alt="Arsenal" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Haaland (2)</p>
+                                                    <p><strong>Possession:</strong> 62% - 38%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 3: Newcastle -->
+                    <tr>
+                        <td class="position-cell">3</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/newcastle.png" alt="Newcastle" class="team-logo">
+                            Newcastle
+                        </td>
+                        <td>31</td>
+                        <td>15</td>
+                        <td>11</td>
+                        <td>5</td>
+                        <td>+27</td>
+                        <td class="points">56</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (0-3)"></span>
+                                        <span class="result-circle loss" title="Lost vs Chelsea (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Liverpool (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Brighton (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/newcastle.png" alt="Newcastle" class="team-logo">
+                                                        <span>Newcastle</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Brighton</span>
+                                                        <img src="../assets/images/brighton.png" alt="Brighton" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Wilson (2)</p>
+                                                    <p><strong>Possession:</strong> 45% - 55%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 4: Manchester United -->
+                    <tr>
+                        <td class="position-cell">4</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/manchesterunited.png" alt="Manchester United" class="team-logo">
+                            Manchester United
+                        </td>
+                        <td>30</td>
+                        <td>16</td>
+                        <td>5</td>
+                        <td>9</td>
+                        <td>+9</td>
+                        <td class="points">53</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Chelsea (1-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Man City (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/manchesterunited.png" alt="Manchester United" class="team-logo">
+                                                        <span>Manchester United</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Fernandes (2)</p>
+                                                    <p><strong>Possession:</strong> 48% - 52%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 5: Tottenham -->
+                    <tr>
+                        <td class="position-cell">5</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/tottenham.png" alt="Tottenham" class="team-logo">
+                            Tottenham
+                        </td>
+                        <td>32</td>
+                        <td>15</td>
+                        <td>5</td>
+                        <td>12</td>
+                        <td>+6</td>
+                        <td class="points">50</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (2-3)"></span>
+                                        <span class="result-circle loss" title="Lost vs Chelsea (1-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/tottenham.png" alt="Tottenham" class="team-logo">
+                                                        <span>Tottenham</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Kane (2)</p>
+                                                    <p><strong>Possession:</strong> 45% - 55%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 6: Liverpool -->
+                    <tr>
+                        <td class="position-cell">6</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/liverpool.png" alt="Liverpool" class="team-logo">
+                            Liverpool
+                        </td>
+                        <td>31</td>
+                        <td>14</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>+22</td>
+                        <td class="points">50</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (1-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Chelsea (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/liverpool.png" alt="Liverpool" class="team-logo">
+                                                        <span>Liverpool</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Salah (2)</p>
+                                                    <p><strong>Possession:</strong> 52% - 48%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 7: Brighton -->
+                    <tr>
+                        <td class="position-cell">7</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/brighton.png" alt="Brighton" class="team-logo">
+                            Brighton
+                        </td>
+                        <td>30</td>
+                        <td>13</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>+14</td>
+                        <td class="points">46</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (1-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Chelsea (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Tottenham (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/brighton.png" alt="Brighton" class="team-logo">
+                                                        <span>Brighton</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Mac Allister (2)</p>
+                                                    <p><strong>Possession:</strong> 42% - 58%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 8: Aston Villa -->
+                    <tr>
+                        <td class="position-cell">8</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                            Aston Villa
+                        </td>
+                        <td>32</td>
+                        <td>13</td>
+                        <td>6</td>
+                        <td>13</td>
+                        <td>-1</td>
+                        <td class="points">45</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (0-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Chelsea (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Tottenham (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                        <span>Aston Villa</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Tottenham</span>
+                                                        <img src="../assets/images/tottenham.png" alt="Tottenham" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Buendia (2)</p>
+                                                    <p><strong>Possession:</strong> 48% - 52%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 9: Brentford -->
+                    <tr>
+                        <td class="position-cell">9</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/brentford.png" alt="Brentford" class="team-logo">
+                            Brentford
+                        </td>
+                        <td>32</td>
+                        <td>10</td>
+                        <td>14</td>
+                        <td>8</td>
+                        <td>+6</td>
+                        <td class="points">44</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (0-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Chelsea (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/brentford.png" alt="Brentford" class="team-logo">
+                                                        <span>Brentford</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Toney (2)</p>
+                                                    <p><strong>Possession:</strong> 45% - 55%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 10: Chelsea -->
+                    <tr>
+                        <td class="position-cell">10</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/chelsea.png" alt="Chelsea" class="team-logo">
+                            Chelsea
+                        </td>
+                        <td>31</td>
+                        <td>10</td>
+                        <td>9</td>
+                        <td>12</td>
+                        <td>-3</td>
+                        <td class="points">39</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (1-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Tottenham (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/chelsea.png" alt="Chelsea" class="team-logo">
+                                                        <span>Chelsea</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Havertz (2)</p>
+                                                    <p><strong>Possession:</strong> 52% - 48%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 11: Leicester City -->
+                    <tr>
+                        <td class="position-cell">11</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/leicestercity.png" alt="Leicester City" class="team-logo">
+                            Leicester City
+                        </td>
+                        <td>32</td>
+                        <td>7</td>
+                        <td>4</td>
+                        <td>21</td>
+                        <td>-15</td>
+                        <td class="points">25</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (1-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Tottenham (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/leicestercity.png" alt="Leicester City" class="team-logo">
+                                                        <span>Leicester City</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Vardy (2)</p>
+                                                    <p><strong>Possession:</strong> 42% - 58%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="gap-row"></tr>
+
+                    <!-- Team 12: Southampton -->
+                    <tr>
+                        <td class="position-cell">12</td>
+                        <td class="team-cell">
+                            <img src="../assets/images/southampton.png" alt="Southampton" class="team-logo">
+                            Southampton
+                        </td>
+                        <td>32</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>21</td>
+                        <td>-31</td>
+                        <td class="points">23</td>
+                        <td>
+                            <div class="match-history">
+                                <details class="match-details">
+                                    <summary>
+                                        <span class="result-circle loss" title="Lost vs Man City (1-2)"></span>
+                                        <span class="result-circle loss" title="Lost vs Tottenham (0-2)"></span>
+                                        <span class="result-circle draw" title="Draw vs Brighton (1-1)"></span>
+                                        <span class="result-circle win" title="Won vs Aston Villa (2-0)"></span>
+                                        <span class="result-circle win" title="Won vs Leeds (2-0)"></span>
+                                    </summary>
+                                    <div class="details-content">
+                                        <div class="match-info">
+                                            <div class="match-item">
+                                                <div class="match-date">Apr 23, 2023</div>
+                                                <div class="match-teams">
+                                                    <div class="team">
+                                                        <img src="../assets/images/southampton.png" alt="Southampton" class="team-logo">
+                                                        <span>Southampton</span>
+                                                    </div>
+                                                    <strong>2 - 0</strong>
+                                                    <div class="team">
+                                                        <span>Aston Villa</span>
+                                                        <img src="../assets/images/astonvilla.png" alt="Aston Villa" class="team-logo">
+                                                    </div>
+                                                </div>
+                                                <div class="match-stats">
+                                                    <p><strong>Scorers:</strong> Adams (2)</p>
+                                                    <p><strong>Possession:</strong> 42% - 58%</p>
+                                                </div>
+                                            </div>
+                                            <!-- Repeat match-item for other matches -->
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

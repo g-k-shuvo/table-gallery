@@ -1,0 +1,192 @@
+/**
+ * CSS Variables
+ * Global color definitions
+ */
+:root {
+    --table-header-bg: #f8f9fa;
+    --table-bg: #ffffff;
+    --border-color: #e9ecef;
+    --hover-bg: #f8f9ff;
+    --primary-color: #2b2d42;
+    --champions-bg: #e3f8e7;
+    --europa-bg: #fff4e6;
+    --relegation-bg: #fff0f3;
+    --text-dark: #2b2d42;
+    --text-muted: #6c757d;
+    --available-color: #28a745;
+    --pending-color: #ffc107;
+    --sold-color: #dc3545;
+}
+
+/**
+ * Reset Styles
+ * Basic reset for all elements
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/**
+ * Body Styles
+ * Sets the main background and spacing
+ */
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+
+/**
+ * Container Styles
+ * Main wrapper for the content with card-like appearance
+ */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/**
+ * Table Wrapper Styles
+ * Table wrapper with scrollable content
+ */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/**
+ * Heading Styles
+ * Separate from table with fixed position
+ */
+ h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+
+/**
+ * Table Styles
+ * Modern clean table design
+ */
+.property-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background: var(--table-bg);
+}
+
+/**
+ * Table Cell Styles
+ * Clean, modern look with proper spacing
+ */
+.property-table th, 
+.property-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/**
+ * Table Header Styles
+ * Light background with subtle text
+ */
+.property-table th {
+    background-color: var(--table-header-bg);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.property-table td {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+.property-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.property-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status.available {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--available-color);
+}
+
+.status.pending {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--pending-color);
+}
+
+.status.sold {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--sold-color);
+}
+
+/* Remove football specific styles */
+.league-table,
+.team-cell,
+.team-logo,
+.points {
+    display: none;
+}
+
+/**
+ * Responsive Design
+ * Adjustments for smaller screens
+ */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .property-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .property-table th,
+    .property-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .property-img {
+        width: 60px;
+        height: 45px;
+    }
+}

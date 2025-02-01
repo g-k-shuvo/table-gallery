@@ -1,0 +1,177 @@
+/**
+ * CSS Variables
+ * Global color definitions
+ */
+:root {
+    --table-header-bg: #f8f9fa;
+    --table-bg: #ffffff;
+    --border-color: #e9ecef;
+    --hover-bg: #f8f9ff;
+    --primary-color: #2b2d42;
+    --champions-bg: #e3f8e7;
+    --europa-bg: #fff4e6;
+    --relegation-bg: #fff0f3;
+    --text-dark: #2b2d42;
+    --text-muted: #6c757d;
+    --available-color: #28a745;
+    --pending-color: #ffc107;
+    --sold-color: #dc3545;
+}
+
+/**
+ * Reset Styles
+ * Basic reset for all elements
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/**
+ * Body Styles
+ * Sets the main background and spacing
+ */
+body {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+
+/**
+ * Container Styles
+ * Main wrapper for the content with card-like appearance
+ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.property-card {
+    background: var(--table-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-details {
+    padding: 16px;
+}
+
+.property-id {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.property-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.property-location {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.property-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.property-specs span {
+    color: var(--text-dark);
+}
+
+.property-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status.available {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--available-color);
+}
+
+.status.pending {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--pending-color);
+}
+
+.status.sold {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--sold-color);
+}
+
+.price {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/**
+ * Responsive Design
+ * Adjustments for smaller screens
+ */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .properties-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .property-img {
+        height: 180px;
+    }
+
+    .property-details {
+        padding: 12px;
+    }
+
+    .property-title {
+        font-size: 16px;
+    }
+
+    .property-specs {
+        font-size: 13px;
+    }
+}

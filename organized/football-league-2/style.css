@@ -1,0 +1,182 @@
+/**
+ * Football League Table Pro
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A responsive and interactive football league table.
+ * Features:
+ * ✓ Responsive design
+ * ✓ Color-coded rows for league positions
+ * ✓ Clean and modern styling
+ * ✓ Cross-browser compatibility
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --table-header-bg: #f8f9fa;
+    --table-bg: #e9e9e9;
+    --border-color: #e9ecef;
+    --hover-bg: #777a86;
+    --primary-color: #2b2d42;
+    --champions-bg: #e3f8e7;
+    --europa-bg: #fff4e6;
+    --relegation-bg: #fff0f3;
+    --text-dark: #2b2d42;
+    --text-muted: #6c757d;
+}
+
+/* ===================
+ * 2. Reset & Base
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* ===================
+ * 3. Container Styles
+ * =================== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--table-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+/* ===================
+ * 4. Table Wrapper
+ * =================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ===================
+ * 5. League Table Styles
+ * =================== */
+.league-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0;
+    background: transparent;
+}
+
+.league-table th, 
+.league-table td {
+    padding: 12px 16px;
+    text-align: center;
+}
+
+.league-table th {
+    background-color: transparent;
+    color: var(--text-muted);
+    font-size: 10px;
+}
+
+.league-table tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+
+.league-table tbody tr:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.league-table td {
+    font-size: 14px;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+.gap-row {
+    height: 10px;
+}
+
+.team-cell {
+    text-align: left;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.points {
+    font-weight: 600;
+}
+
+/* ===================
+ * 6. Position-based Styling
+ * =================== */
+.position-cell {
+    border-left: 3px solid transparent;
+}
+
+/* Champions League positions (1-4) */
+tr:nth-child(-n+4) .position-cell {
+    border-left: 3px solid #4CAF50;
+}
+
+/* Europa League positions (5-6) */
+tr:nth-child(n+5):nth-child(-n+6) .position-cell {
+    border-left: 3px solid #2196F3;
+}
+
+/* Mid-table positions (7-9) */
+tr:nth-child(n+7):nth-child(-n+9) .position-cell {
+    border-left: 3px solid #FFC107;
+}
+
+/* Lower mid-table positions (10-11) */
+tr:nth-child(n+10):nth-child(-n+11) .position-cell {
+    border-left: 3px solid #FF9800;
+}
+
+/* Relegation positions (12+) */
+tr:nth-child(n+12) .position-cell {
+    border-left: 3px solid #f44336;
+}
+
+/* ===================
+ * 7. Responsive Design
+ * =================== */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .league-table th,
+    .league-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .team-logo {
+        width: 20px;
+        height: 20px;
+    }
+}

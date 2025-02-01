@@ -1,0 +1,237 @@
+/**
+ * Course List Cards Pro
+ * Version: 1.0.0
+ * Author: Your Name
+ * 
+ * A modern, responsive course listing component with interactive cards.
+ * Features:
+ * ✓ Responsive grid layout
+ * ✓ Interactive hover effects
+ * ✓ Color-coded status indicators
+ * ✓ Info popup tooltips
+ * ✓ Statistics display
+ * ✓ Mobile-optimized design
+ * ✓ Easy customization
+ * ✓ Cross-browser compatibility
+ */
+
+/* ===================
+ * 1. CSS Variables
+ * =================== */
+ :root {
+    --card-bg: #ffffff;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --muted-text: #999999;
+    --border-yellow: #FFB74D;
+    --border-green: #4CAF50;
+    --border-red: #FF5252;
+    --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ===================
+ * 2. Reset & Base
+ * =================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    background-color: #5CD4E9;
+}
+
+/* ===================
+ * 3. Grid Layout
+ * =================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.groups-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===================
+ * 4. Card Styles
+ * =================== */
+.group {
+    background: var(--card-bg);
+    padding: 20px;
+    position: relative;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.3s ease;
+}
+
+.group:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+.course-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-text);
+    margin-bottom: 4px;
+}
+
+.course-date {
+    font-size: 12px;
+    color: var(--secondary-text);
+    margin-bottom: 12px;
+}
+
+.prospects {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #F5F5F5;
+    border-radius: 25px;
+    font-size: 14px;
+    color: var(--secondary-text);
+    margin-bottom: 25px;
+}
+
+/* Color indicators */
+.group::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--border-yellow);
+}
+
+.group.green::after {
+    background-color: var(--border-green);
+}
+
+.group.red::after {
+    background-color: var(--border-red);
+}
+
+/* ===================
+ * 5. Statistics
+ * =================== */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 40px 0 0;
+}
+
+.stat-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-group .label {
+    font-size: 10px;
+    color: var(--muted-text);
+    text-transform: uppercase;
+}
+
+.stat-group .value {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+/* ===================
+ * 6. Info Tooltip
+ * =================== */
+.info-details {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+
+.info-button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #F5F5F5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--secondary-text);
+    transition: background 0.3s ease;
+}
+
+.info-button:hover {
+    background: #E0E0E0;
+}
+
+.info-details summary {
+    list-style: none;
+}
+
+.info-content {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    width: 200px;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.info-content h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--primary-text);
+}
+
+.info-content p {
+    font-size: 12px;
+    color: var(--secondary-text);
+    margin-bottom: 4px;
+}
+
+/* Tooltip arrow */
+.info-content::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    right: 8px;
+    border: 8px solid transparent;
+    border-top-color: var(--card-bg);
+}
+
+/* ===================
+ * 7. Responsive Design
+ * =================== */
+@media (max-width: 1024px) {
+    .groups-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .groups-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .group {
+        width: 100%;
+        overflow-x: scroll;
+    }
+}
