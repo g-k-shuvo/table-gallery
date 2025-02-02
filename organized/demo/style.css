@@ -1,7 +1,7 @@
 /**
- * Demo Template
+ * Demo Home
  * Version: 1.0.0
- * Author: Your Name
+ * Author: FinderLab
  * 
  * A premium, responsive conference schedule table with interactive features.
  * Features:
@@ -80,20 +80,6 @@ body {
 }
 
 
-@media (max-width: 480px) {
-    .list-container {
-        margin: 10px auto;
-    }
-    
-    .nav-button {
-        padding: 6px 12px;
-        font-size: 13px;
-    }
-    
-    .list-item {
-        gap: 8px;
-    }
-}
 
 
 /* ===================
@@ -101,7 +87,7 @@ body {
  * =================== */
  .content-wrapper {
     max-width: 1200px;
-    /* margin: 0 auto 40px; */
+    margin: 0 auto 40px;
     padding: 0 20px;
 }
 
@@ -135,14 +121,16 @@ body {
     color: #444;
 }
 
-.features-section {
+.features-section,
+.support-details {
     background: #f8f9fa;
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 30px;
 }
 
-.features-section h3 {
+.features-section h3,
+.support-details h3 {
     color: #333;
     margin-bottom: 20px;
 }
@@ -162,6 +150,22 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 30px;
+}
+
 .demo-note {
     background: #e8f4ff;
     padding: 20px;
@@ -174,12 +178,24 @@ body {
     line-height: 1.6;
 }
 
+.support-details-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.support-details-list li span {
+    font-weight: 600;
+}
+
+
 .version-info {
     text-align: center;
     padding: 20px;
     background: #f8f9fa;
     border-radius: 8px;
 }
+
+
 
 @media (max-width: 768px) {
     .hero-section h1 {
@@ -192,5 +208,21 @@ body {
     
     .feature-list {
         grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .list-container {
+        margin: 10px auto;
+    }
+    
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .list-item {
+        gap: 8px;
     }
 }
