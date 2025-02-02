@@ -1,7 +1,7 @@
 /**
  * Top Grossing Movies Table
  * Version: 1.0.0
- * Author: Your Name
+ * Author: FinderLab
  * 
  * A responsive and clean table for displaying top-grossing movies.
  * Features:
@@ -37,6 +37,12 @@
 body {
     background-color: #f4f4f4;
     padding: 20px;
+}
+
+.description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
 }
 
 /* ===================
@@ -209,5 +215,68 @@ tr:not(:nth-last-child(-n+3)) .movie-details .details-content {
     .details-content img {
         width: 80px;
         height: 120px;
+    }
+}
+
+
+
+/* ===================
+ * Navigation
+ * =================== */
+
+ .list-wrapper {
+    border-bottom: 3px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.list-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.list-item {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.nav-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+
+@media (max-width: 480px) {
+    .list-container {
+        margin: 10px auto;
+    }
+    
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .list-item {
+        gap: 8px;
     }
 }

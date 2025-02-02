@@ -1,3 +1,19 @@
+<!--
+/**
+ * Order Summary Table
+ * 
+ * A simple and effective order summary table with a clean and modern design.
+ * Features:
+ * - Responsive layout
+ * - Easy-to-use interface
+ * - Detailed order breakdown by product
+ * - Total order amount and trends
+ * 
+ * @author FinderLab
+ * @version 1.0.0
+*/
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +21,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Order Summary Table - Track purchases and totals">
-    <meta name="author" content="Your Name">
-    <title>Order Summary</title>
+    <meta name="author" content="FinderLab">
+    <title>E-Commerce Order Table</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,16 +33,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Table Header -->
-        <div class="table-header">
-            <h1>Orders</h1>
-            <div class="date-filter">
-                <span class="date-label">30 Sep, 23:01</span>
+
+
+      <!-- Navigation Gallery Wrapper -->
+      <div class="list-wrapper">
+        <div class="list-container">
+            <div class="list-item">
+                <!-- Home -->
+                <a href="../demo/index.html" class="nav-button">Home</a>
+                
+                <!-- Table Templates -->
+                <a href="../conference-schedule/index.html" class="nav-button">Conference Schedule</a>
+                <a href="../course-list/index.html" class="nav-button">Course List</a>
+                <a href="../customer-feedback/index.html" class="nav-button">Customer Feedback</a>
+                <a href="../employees-of-branch/index.html" class="nav-button">Employees of Branch</a>
+                <a href="../faq/index.html" class="nav-button">FAQ</a>
+                
+                <!-- Sports Templates -->
+                <a href="../football-league-1/index.html" class="nav-button">Football League 1</a>
+                <a href="../football-league-2/index.html" class="nav-button">Football League 2</a>
+                <a href="../football-league-3/index.html" class="nav-button">Football League 3</a>
+                <a href="../football-league-4/index.html" class="nav-button">Football League 4</a>
+                
+                <!-- Business Templates -->
+                <a href="../monthly-expense/index.html" class="nav-button">Monthly Expense</a>
+                <a href="../orders-1/index.html" class="nav-button active">Orders 1</a>
+                <a href="../orders-2/index.html" class="nav-button">Orders 2</a>
+                <a href="../product-compare/index.html" class="nav-button">Product Compare</a>
+                <a href="../product-specification/index.html" class="nav-button">Product Specification</a>
+                
+                <!-- Real Estate Templates -->
+                <a href="../property-listing-1/index.html" class="nav-button">Property Listing 1</a>
+                <a href="../property-listing-2/index.html" class="nav-button">Property Listing 2</a>
+                
+                <!-- Education & Entertainment -->
+                <a href="../students-grade/index.html" class="nav-button">Students Grade</a>
+                <a href="../top-grossing-movies/index.html" class="nav-button">Top Grossing Movies</a>
             </div>
         </div>
+    </div>
 
+
+    <div class="container">
+       
+        <h1>E-Commerce Order Table</h1>
+        <p class="description">
+            Clean order management table with order IDs, products, quantities, prices, and statuses (Pending/Completed). Add tracking links and export to CSV. Built for WooCommerce stores. </p>
+       
         <!-- Table Wrapper -->
         <div class="table-wrapper">
             <table class="orders-table">

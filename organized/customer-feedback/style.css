@@ -1,7 +1,7 @@
 /**
  * Employees Table
  * Version: 1.0.0
- * Author: Your Name
+ * Author: FinderLab
  * 
  * A responsive and clean table for displaying employee details.
  * Features:
@@ -22,6 +22,7 @@
     --status-verified: #00b894;
     --status-pending: #fdcb6e;
     --status-rejected: #ff7675;
+    --text-muted: #757575;
 }
 
 /* ===================
@@ -49,6 +50,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 20px;
+}
+
+.description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
 }
 
 /* ===================
@@ -260,5 +267,68 @@ input[type="checkbox"] {
 @media (max-width: 480px) {
     .details-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ===================
+ * Navigation
+ * =================== */
+
+ .list-wrapper {
+    border-bottom: 3px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.list-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.list-item {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.nav-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+
+@media (max-width: 480px) {
+    .list-container {
+        margin: 10px auto;
+    }
+    
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .list-item {
+        gap: 8px;
     }
 }

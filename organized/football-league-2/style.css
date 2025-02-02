@@ -61,6 +61,12 @@ h1 {
     font-weight: 500;
 }
 
+.description {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
 /* ===================
  * 4. Table Wrapper
  * =================== */
@@ -178,5 +184,68 @@ tr:nth-child(n+12) .position-cell {
     .team-logo {
         width: 20px;
         height: 20px;
+    }
+}
+
+
+
+/* ===================
+ * Navigation
+ * =================== */
+
+ .list-wrapper {
+    border-bottom: 3px solid #e0e0e0;
+    margin-bottom: 40px;
+}
+
+.list-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.list-item {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.nav-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+
+@media (max-width: 480px) {
+    .list-container {
+        margin: 10px auto;
+    }
+    
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .list-item {
+        gap: 8px;
     }
 }
