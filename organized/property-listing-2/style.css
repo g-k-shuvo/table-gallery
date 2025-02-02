@@ -24,6 +24,9 @@
     --sold-color: #dc3545;
     --text-dark: #2b2d42;
     --text-muted: #6c757d;
+    --filter-btn-bg: #ffffff;
+    --filter-btn-active: #007bff;
+    --border-color-dark: #dfdfdf;
 }
 
 /* ===================
@@ -66,9 +69,86 @@ body {
     font-weight: 500;
 }
 
+/* ===================
+ * 5. Filter Styles
+ * =================== */
+/* Hide the filter radio inputs */
+input[name="filter"] {
+    display: none;
+}
+
+/* Hide the button radio inputs */
+input[name="filter-btn"] {
+    display: none;
+}
+
+.filter-container {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 4px;
+    background: var(--table-header-bg);
+    border-radius: 8px;
+    width: fit-content;
+    border: 1px solid var(--border-color-dark);
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: rgba(0, 123, 255, 0.1);
+    color: var(--filter-btn-active);
+}
+
+input[name="filter-btn"]:checked + .filter-btn {
+    background: var(--filter-btn-active);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+
+#all:checked ~ .properties-grid .property-card {
+    display: block;
+}
+
+#available:checked ~ .properties-grid .property-card {
+    display: none;
+}
+
+#available:checked ~ .properties-grid .property-card[data-status="available"] {
+    display: block;
+}
+
+#pending:checked ~ .properties-grid .property-card {
+    display: none;
+}
+
+#pending:checked ~ .properties-grid .property-card[data-status="pending"] {
+    display: block;
+}
+
+#sold:checked ~ .properties-grid .property-card {
+    display: none;
+}
+
+#sold:checked ~ .properties-grid .property-card[data-status="sold"] {
+    display: block;
+}
+
 
 /* ===================
- * 5. Properties Grid Styles
+ * 6. Properties Grid Styles
  * =================== */
 .properties-grid {
     display: grid;
@@ -166,11 +246,21 @@ body {
 }
 
 /* ===================
- * 6. Responsive Design
+ * 7. Responsive Design
  * =================== */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
+    }
+
+    .filter-container {
+        margin-bottom: 16px;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 13px;
     }
 
     .properties-grid {
@@ -194,9 +284,6 @@ body {
         font-size: 13px;
     }
 }
-
-
-
 
 /* ===================
  * Navigation
@@ -242,7 +329,6 @@ body {
     color: white;
     border-color: #0056b3;
 }
-
 
 @media (max-width: 480px) {
     .list-container {

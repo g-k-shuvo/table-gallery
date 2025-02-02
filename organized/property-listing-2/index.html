@@ -79,9 +79,30 @@
             Commercial real estate table in a grid view with lease terms, zoning types, and tenant occupancy rates. Add maps and downloadable brochures. Ideal for brokerage firms.
         </p>
 
+        <input type="radio" id="all" name="filter" value="all" checked>
+        <input type="radio" id="available" name="filter" value="available">
+        <input type="radio" id="pending" name="filter" value="pending">
+        <input type="radio" id="sold" name="filter" value="sold">
+
+        <!-- Filters -->
+        <div class="filter-container">
+            <input type="radio" id="all-btn" name="filter-btn" value="all" checked>
+            <label for="all-btn" class="filter-btn" onclick="document.getElementById('all').click()">All</label>
+    
+            <input type="radio" id="available-btn" name="filter-btn" value="available">
+            <label for="available-btn" class="filter-btn" onclick="document.getElementById('available').click()">Available</label>
+    
+            <input type="radio" id="pending-btn" name="filter-btn" value="pending">
+            <label for="pending-btn" class="filter-btn" onclick="document.getElementById('pending').click()">Pending</label>
+    
+            <input type="radio" id="sold-btn" name="filter-btn" value="sold">
+            <label for="sold-btn" class="filter-btn" onclick="document.getElementById('sold').click()">Sold</label>
+        </div>
+
+        <!-- Properties Grid -->
         <div class="properties-grid">
             <!-- Property Card 1 -->
-            <div class="property-card">
+            <div class="property-card" data-status="available">
                 <img src="../assets/images/property-1.jpg" alt="Modern Villa" class="property-img">
                 <div class="property-details">
                     <div class="property-id">P001</div>
@@ -101,7 +122,7 @@
             </div>
 
             <!-- Property Card 2 -->
-            <div class="property-card">
+            <div class="property-card" data-status="pending">
                 <img src="../assets/images/property-2.jpg" alt="City Apartment" class="property-img">
                 <div class="property-details">
                     <div class="property-id">P002</div>
@@ -121,7 +142,7 @@
             </div>
 
             <!-- Property Card 3 -->
-            <div class="property-card">
+            <div class="property-card" data-status="sold">
                 <img src="../assets/images/property-3.jpg" alt="Beach House" class="property-img">
                 <div class="property-details">
                     <div class="property-id">P003</div>
@@ -141,7 +162,7 @@
             </div>
 
             <!-- Property Card 4 -->
-            <div class="property-card">
+            <div class="property-card" data-status="available">
                 <img src="../assets/images/property-4.jpg" alt="Modern Condo" class="property-img">
                 <div class="property-details">
                     <div class="property-id">P004</div>
@@ -161,7 +182,7 @@
             </div>
 
             <!-- Property Card 5 -->
-            <div class="property-card">
+            <div class="property-card" data-status="pending">
                 <img src="../assets/images/property-5.jpg" alt="Luxury Penthouse" class="property-img">
                 <div class="property-details">
                     <div class="property-id">P005</div>
@@ -180,6 +201,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </body>
 </html>
